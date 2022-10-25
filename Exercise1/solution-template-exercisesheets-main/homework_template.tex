@@ -1,0 +1,115 @@
+\documentclass[12pt,a4paper]{article}
+
+\input{setup/packages.tex}
+
+% Fill these values with the ones you need
+\def\authors{Saibaba, Teammate2, Teammate3, Teammate4}
+\def\date{\today}
+\def\sheetno{1}
+
+
+% Insert your macros to ./setup/macros.tex
+% Insert your figures to ./figures
+% Cryptocode reference: https://mirrors.ibiblio.org/CTAN/macros/latex/contrib/cryptocode/cryptocode.pdf
+
+\begin{document}
+\frontpart
+
+ \exercise
+	NO ONE SHALL BE SUBJECTED TO ARBITRARY INTERFERENCE WITH HIS PRIVACY FAMILY HOME OR CORRESPONDENCE NOR TO ATTACKS UPON HIS HONOUR AND REPUTATION EVERYONE HAS THE RIGHT TO THE PROTECTION OF THE LAW AGAINST SUCH INTERFERENCE OR ATTACKS
+
+	Decrypt: KVUMDLQXTZGEYBIFWRAPHSONCJ
+
+ \exercise
+ 	FEW FALSE IDEAS HAVE MORE FIRMLY GRIPPED THE MINDS OF SO MANY INTELLIGENT MEN THAN THE ONE THAT IF THEY JUST TRIED THEY COULD INVENT A CIPHER THAT NO UEKONE COULD BREAK
+
+ \exercise
+ 	THE BANANA IS AN EDIBLE FRUIT BOTANICALLY A BERRY PRODUCED BY SEVERAL KINDS OF LARGE HERBACEOUS FLOWER IN GPLANTSINTHEGENUSMUSA IN SOME COUNTRIES BANANAS 
+	USED FOR COOKING MAY BE CALLED PLANTAINS THE FRUIT IS VARIABLE IN SIZE COLOR AND FIRMNESS BUT IS USUALLY ELONGATED AND CURVED WITH SOFT FLESH RICH IN STARCH
+	COVERED WITH ARIND WHICH MAY BE GREEN YELLOW RED PURPLE OR BROWN WHEN RIPE THE FRUITS GROW IN CLUSTERS HANGING FROM THE TOP OF THE PLANT WORLDWIDE
+	THERE IS NO SHARP DISTINCTION BETWEEN BANANAS AND PLANTAINS ESPECIALLY IN THE AMERICAS AND EUROPE BANANA USUALLY REFERS TO SOFT SWEET DESSERT BANANAS 
+	PARTICULARLY THOSE OF THE CAVENDISH GROUP WHICH ARE THE MAIN EXPORTS FROM BANANA GROWING COUNTRIES BY CONTRAST MUSACULTIVARS WITH FIRMERST ARCHIER FRUIT ARE CALLED 
+	PLANTAINS IN OTHER REGIONS SUCH AS SOUTH EAST ASIA MANY MORE KINDS OF BANANA ARE GROWN AND EATEN SO THE SIMPLE TWO FOLD DISTINCTION IS NOT USEFUL AND IS NOT 
+	MADE IN LOCAL LANGUAGES
+
+	key: crypto
+
+
+ \exercise
+ To estimate the period we use the Kasiski test. The distance between the two occurrences
+ given is
+ 241 - 10 = 231 = 3 · 7 · 11
+ positions.
+ 
+ Possible periods are thus 3, 7 and 11. If the guess is correct, we can immediately find the
+ corresponding shifts: at position 10 the shift is
+ T - c = 19 - 2 = 17 = r
+ 
+ Similar computations for the other positions gives the shift keys
+ rrectcorrect
+ 
+ We now see that this is not periodic with periods 3 or 11, while period 7 is possible. The keyword
+ of length 7 starts at position 15; hence the keyword is
+ correct. 
+
+
+ \exercise
+
+   	Pr(D is even) = 1/2
+  
+
+  	Pr(H) = 1/2
+
+  
+  	Pr(D is prime) = 1/2
+
+  
+  	Pr(D is prime/H) = Pr(D is prime) = 1/2
+	
+
+  	Pr(D is prime/ D is even) = 1/3
+
+
+  % Pr(D is prime \land D is even) = 1/6
+  % Pr(D is prime \land D is even) = 1/6
+  	Pr(D is prime and D is even) = 1/6
+
+
+  	Pr(D is prime or D is even) = 5/6
+
+
+ 	Pr(D is even) + Pr(D is prime) = 1/2 + 1/2 = 1
+
+
+
+
+ \exercise
+ 	Here is the solution for Exercise 1.1. Reference to \Cref{fig:Example}.
+ 	2222
+
+ 	\begin{figure}[h]
+ 		\center
+ 		\includegraphics[width=2cm]{figures/logo}
+ 		\caption{Example Figure}
+ 		\label{fig:Example}	
+ 	\end{figure}
+
+ \exercise
+    % For reference, look at line 12
+ 	\procedure[linenumbering]{$\Enc(m)$}{ % I defined \Enc as macro in the file ./setup/macros.tex
+ 		k \sample \GG \\
+ 		c \gets \Enc(k, m) \\
+ 		\pcreturn (k, c)
+ 	}
+
+ \exercise
+    % For reference, look at line 12
+ 	\procedure[linenumbering]{$\Enc(m)$}{ % I defined \Enc as macro in the file ./setup/macros.tex
+ 		k \sample \GG \\
+ 		c \gets \Enc(k, m) \\
+ 		\pcreturn (k, c)
+ 	}
+ 
+ \exercise
+ \exercise
+\end{document}
