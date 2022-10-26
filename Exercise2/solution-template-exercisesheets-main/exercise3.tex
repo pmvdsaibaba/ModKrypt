@@ -1,0 +1,34 @@
+\(f\) and \(g\) are negligible functions and \(q\) be a positive polynomial.\\
+\begin{itemize}
+\item[(a)]
+	Is \(e^{-x}\) negligible? \\
+	For any polynomial \(x^c\), choose \(N=c\), then for all \(x > N\) holds:\\
+	\(e^{-x} < \frac{1}{x^c}\), because \(e^x > x^c\) for all \(x > N = c\).\\
+	\( \Rightarrow e^{-x}\) is negligible.
+\item[(b)] 
+	Is \(\frac{1}{x^{2021}} + 1\) negligible? \\
+	For the polynomial \(x^{2022}\) there is no \(N\), that for all \(x > N\) holds: \\
+	\(\frac{1}{x^{2021}} + 1 < \frac{1}{x^{2022}}\), because \(x^{2021}\) is always smaller than \(x^{2022}\).\\
+	\( \Rightarrow \frac{1}{x^{2021}} + 1\) is not negligible.
+\item[(c)]
+	Is \(h(x)\) negligible, when \(h(x)\) is a positive function such that \(h(x) < f(x)\) for all \(x\)? \\
+	For \(f(x)\) holds: \(f(x) < \frac{1}{p(x)}\) (Definition 0.1).\\
+	Because of \(h(x) < f(x) < \frac{1}{p(x)}\) for all \(x\), \(h(x)\) is also negligible.
+\item[(d)]
+		Is \(f(x) + g(x)\) negligible?\\
+		\(f(x)\) negligible \(\Rightarrow f(x) < \frac{1}{p(x)}\) (Definition 0.1).\\
+		\(g(x)\) negligible \(\Rightarrow g(x) < \frac{1}{p'(x)}\) (Definition 0.1).\\
+		\begin{flalign*}
+			\Rightarrow f(x) + g(x) &< \frac{1}{p(x)} + \frac{1}{p'(x)}&\\
+			&= \frac{p'(x) + p(x)}{p(x) \cdot p'(x)}&\\
+			&= \frac{1}{\frac{p(x) \cdot p'(x)}{p'(x) + p(x)}}
+		\end{flalign*}
+		Addition, multiplication and division of two polynomials results in another polynomial. Because of that the denominator (\(\frac{p(x) \cdot p'(x)}{p'(x) + p(x)}\)) can also be any polynomial.\\
+		\( \Rightarrow f(x) + g(x)\) is  negligible.
+\item[(e)]
+\item[(f)]
+\item[(g)]
+\item[(h)]
+\item[(i)]
+\end{itemize}
+

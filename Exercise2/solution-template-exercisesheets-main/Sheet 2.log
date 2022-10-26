@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8) (preloaded format=pdflatex 2022.8.17)  26 OCT 2022 10:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8) (preloaded format=pdflatex 2022.8.17)  26 OCT 2022 14:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**./homework_template.tex
-(homework_template.tex
+**"./Sheet 2.tex"
+(Sheet 2.tex
 LaTeX2e <2022-06-01> patch level 5
 L3 programming layer <2022-08-05>
 (C:\Users\pramb\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -928,8 +928,8 @@ e 49.
 LaTeX Warning: \include should only be used after \begin{document} on input lin
 e 50.
 
-(setup/macros.tex)) (homework_template.aux)
-\openout1 = `homework_template.aux'.
+(setup/macros.tex)) (Sheet 2.aux)
+\openout1 = `"Sheet 2.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
 LaTeX Font Info:    ... okay on input line 15.
@@ -1024,9 +1024,9 @@ Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
 (lastpage)             ! on input line 15.
 Package hyperref Info: Link coloring OFF on input line 15.
-(homework_template.out) (homework_template.out)
+(Sheet 2.out) (Sheet 2.out)
 \@outlinefile=\write4
-\openout4 = `homework_template.out'.
+\openout4 = `"Sheet 2.out"'.
 
 
 
@@ -1038,40 +1038,47 @@ loading the todonotes package. on input line 15.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
-
-AED: lastpage setting LastPage
-LaTeX Font Info:    Trying to load font information for U+msa on input line 41.
+(exercise1.tex) (exercise3.tex
+LaTeX Font Info:    Trying to load font information for U+msa on input line 1.
 
 (C:\Users\pramb\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 41.
-
+LaTeX Font Info:    Trying to load font information for U+msb on input line 1.
 
 (C:\Users\pramb\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+Underfull \hbox (badness 10000) in paragraph at lines 1--2
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--21
+
+ []
+
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/scsl' undefined
-(Font)              using `OT1/cmss/m/sc' instead on input line 41.
+(Font)              using `OT1/cmss/m/sc' instead on input line 33.
 
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <17.28> not available
-(Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 41.
+(Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 33.
 
-<setup/logo.png, id=30, 158.41583pt x 158.41583pt>
+<setup/logo.png, id=26, 158.41583pt x 158.41583pt>
 File: setup/logo.png Graphic file (type png)
 <use setup/logo.png>
-Package pdftex.def Info: setup/logo.png  used on input line 41.
+Package pdftex.def Info: setup/logo.png  used on input line 33.
 (pdftex.def)             Requested size: 28.45076pt x 28.45274pt.
 
 
 pdfTeX warning: pdflatex.exe (file ./setup/FAU_logo.pdf): PDF inclusion: found 
 PDF version <1.6>, but at most version <1.5> allowed
-<setup/FAU_logo.pdf, id=32, 548.35236pt x 227.51097pt>
+<setup/FAU_logo.pdf, id=28, 548.35236pt x 227.51097pt>
 File: setup/FAU_logo.pdf Graphic file (type pdf)
 <use setup/FAU_logo.pdf>
-Package pdftex.def Info: setup/FAU_logo.pdf  used on input line 41.
+Package pdftex.def Info: setup/FAU_logo.pdf  used on input line 33.
 (pdftex.def)             Requested size: 68.57733pt x 28.45274pt.
 
 Package scrlayer-scrpage Warning: \headheight to low.
@@ -1081,8 +1088,8 @@ Package scrlayer-scrpage Warning: \headheight to low.
 (scrlayer-scrpage)                processing, but you should do this yourself,
 (scrlayer-scrpage)                e.g., setting geometry's option
 (scrlayer-scrpage)                `head=87.9479pt'.
-(scrlayer-scrpage)                I'll also decrease \topmargin on input line 4
-1.
+(scrlayer-scrpage)                I'll also decrease \topmargin on input line 3
+3.
 
 
 Overfull \vbox (75.9479pt too high) has occurred while \output is active []
@@ -1090,41 +1097,53 @@ Overfull \vbox (75.9479pt too high) has occurred while \output is active []
 
 [1{C:/Users/pramb/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
 
- <./setup/logo.png> <./setup/FAU_logo.pdf>] (homework_template.aux)
+ <./setup/logo.png> <./setup/FAU_logo.pdf>]) (exercise4.tex)
 
-Package rerunfilecheck Warning: File `homework_template.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
+AED: lastpage setting LastPage
 
-Package rerunfilecheck Info: Checksums for `homework_template.out':
-(rerunfilecheck)             Before: 3DC43373EC07B03296A6788CDFF2BB59;210
-(rerunfilecheck)             After:  E41E9EC76E06A704C6361735357EF817;140.
+LaTeX Font Warning: Font shape `OT1/cmss/m/scsl' undefined
+(Font)              using `OT1/cmss/m/sc' instead on input line 41.
+
+File: setup/logo.png Graphic file (type png)
+<use setup/logo.png>
+Package pdftex.def Info: setup/logo.png  used on input line 41.
+(pdftex.def)             Requested size: 28.45076pt x 28.45274pt.
+File: setup/FAU_logo.pdf Graphic file (type pdf)
+<use setup/FAU_logo.pdf>
+Package pdftex.def Info: setup/FAU_logo.pdf  used on input line 41.
+(pdftex.def)             Requested size: 68.57733pt x 28.45274pt.
+[2] (Sheet 2.aux)
+Package rerunfilecheck Info: File `"Sheet 2".out' has not changed.
+(rerunfilecheck)             Checksum: 0C445C11D55D2836D41884682AE0087C;175.
  ) 
 Here is how much of TeX's memory you used:
- 28611 strings out of 477992
- 571552 string characters out of 2827466
- 917607 words of memory out of 3000000
- 46895 multiletter control sequences out of 15000+600000
+ 28627 strings out of 477992
+ 571898 string characters out of 2827466
+ 932591 words of memory out of 3000000
+ 46902 multiletter control sequences out of 15000+600000
  476601 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,25n,123p,554b,618s stack positions out of 10000i,1000n,20000p,200000b,80000s
-
-pdfTeX warning (dest): name{section.6} has been referenced but does not exist, 
-replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section.5} has been referenced but does not exist, 
-replaced by a fixed one
-
-<C:/Users/pramb/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
-csc10.pfb><C:/Users/pramb/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
-onts/cm/cmss17.pfb><C:/Users/pramb/AppData/Local/Programs/MiKTeX/fonts/type1/pu
-blic/amsfonts/cm/cmssi10.pfb><C:/Users/pramb/AppData/Local/Programs/MiKTeX/font
-s/type1/public/amsfonts/cm/cmssi12.pfb><C:/Users/pramb/AppData/Local/Programs/M
-iKTeX/fonts/type1/public/amsfonts/cm/cmssi8.pfb>
-Output written on homework_template.pdf (1 page, 346888 bytes).
+ 128i,25n,123p,546b,680s stack positions out of 10000i,1000n,20000p,200000b,80000s
+<C:/Users/pramb/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmcsc10.pfb><C:/Users/pramb/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
+sfonts/cm/cmmi12.pfb><C:/Users/pramb/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/amsfonts/cm/cmmi6.pfb><C:/Users/pramb/AppData/Local/Programs/MiKTeX/font
+s/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/pramb/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/pramb/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/pramb/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/pramb/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Users/p
+ramb/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss17.pfb><C
+:/Users/pramb/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss
+i10.pfb><C:/Users/pramb/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmssi12.pfb><C:/Users/pramb/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/amsfonts/cm/cmssi8.pfb><C:/Users/pramb/AppData/Local/Programs/MiKTeX/fonts/
+type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/pramb/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/pramb/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on "Sheet 2.pdf" (2 pages, 445757 bytes).
 PDF statistics:
- 85 PDF objects out of 1000 (max. 8388607)
+ 136 PDF objects out of 1000 (max. 8388607)
  8 named destinations out of 1000 (max. 500000)
- 71 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 63 words of extra memory for PDF output out of 10000 (max. 10000000)
 
