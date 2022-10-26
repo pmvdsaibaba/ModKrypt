@@ -133,22 +133,18 @@ Why are ((g)) and ((h)) different?\\
 % 		\label{fig:Example}	
 % 	\end{figure}
  \exercise
-% \exercise
-%    % For reference, look at line 12
-% 	\procedure[linenumbering]{$\Enc(m)$}{ % I defined \Enc as macro in the file ./setup/macros.tex
-% 		k \sample \GG \\
-% 		c \gets \Enc(k, m) \\
-% 		\pcreturn (k, c)
-% 	}
+ Pr [false positive] = Pr [positive\(\vert\)not infected] = 0.009 \\
+ Pr [false negative] = Pr [negative\(\vert\)infected] = 0.0005 \\
+ Pr [infected] = 0.0017 \\
+ 
+ \noindent Pr [not infected] = 1 - Pr [infected] = 0.9983 \\
+ Pr [positive \(\land\) not infected] = Pr [positive\(\vert\)not infected] \(\cdot\) Pr [not infected] = 0.009 \(\cdot\) 0.9983 = 0.0089847 \\
+ Pr [negative \(\land\) infected] = Pr [negative\(\vert\)infected] \(\cdot\) Pr [infected] = 0.0005 \(\cdot \) 0.0017 = 0.00000085 \\
+ Pr [negative \(\land\) not infected] = Pr [not infected] - Pr [positive \(\land\) not infected] = 0.9983 - 0.0089847 = 0.99829915 \\
+ Pr [positive \(\land\) infected] = Pr [infected] - Pr [negative \(\land\) infected] = 0.0017 -  0.00000085 = 0.00169915 \\
+ Pr [positive] = Pr [positive \(\land\) not infected] + Pr [positive \(\land\) infected] =  0.0089847 + 0.00169915 = 0.01068385\\
+ \\
+ Pr [infected\(\vert\)positive]  = 
+ Pr [infected \(\land \) positive] / Pr [positive]= 0.00169915 / 0.01068385 = 0.159039
 
-% \exercise
-%    % For reference, look at line 12
-% 	\procedure[linenumbering]{$\Enc(m)$}{ % I defined \Enc as macro in the file ./setup/macros.tex
-% 		k \sample \GG \\
-% 		c \gets \Enc(k, m) \\
-% 		\pcreturn (k, c)
-% 	}
-% 
-% \exercise
-% \exercise
 \end{document}
