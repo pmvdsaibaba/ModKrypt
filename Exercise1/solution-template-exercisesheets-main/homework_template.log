@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8) (preloaded format=pdflatex 2022.8.17)  26 OCT 2022 10:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8) (preloaded format=pdflatex 2022.8.17)  26 OCT 2022 13:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1110,40 +1110,76 @@ Underfull \hbox (badness 10000) in paragraph at lines 102--103
  []
 
 
+LaTeX Warning: Command \textthreesuperior invalid in math mode on input line 12
+5.
+
+
+LaTeX Warning: Command \textthreesuperior invalid in math mode on input line 12
+5.
+
+Missing character: There is no ³ in font cmr12!
+
+LaTeX Warning: Command \textthreesuperior invalid in math mode on input line 12
+5.
+
+
+LaTeX Warning: Command \textthreesuperior invalid in math mode on input line 12
+5.
+
+Missing character: There is no ³ in font cmr12!
+
+LaTeX Warning: Command \textthreesuperior invalid in math mode on input line 12
+5.
+
+
+LaTeX Warning: Command \textthreesuperior invalid in math mode on input line 12
+5.
+
+Missing character: There is no ³ in font cmr12!
+
+LaTeX Warning: Command \textthreesuperior invalid in math mode on input line 12
+5.
+
+
+LaTeX Warning: Command \textthreesuperior invalid in math mode on input line 12
+5.
+
+Missing character: There is no ³ in font cmr12!
+
 LaTeX Font Warning: Font shape `OT1/cmss/m/scsl' undefined
-(Font)              using `OT1/cmss/m/sc' instead on input line 120.
+(Font)              using `OT1/cmss/m/sc' instead on input line 125.
 
 File: setup/logo.png Graphic file (type png)
 <use setup/logo.png>
-Package pdftex.def Info: setup/logo.png  used on input line 120.
+Package pdftex.def Info: setup/logo.png  used on input line 125.
 (pdftex.def)             Requested size: 28.45076pt x 28.45274pt.
 File: setup/FAU_logo.pdf Graphic file (type pdf)
 <use setup/FAU_logo.pdf>
-Package pdftex.def Info: setup/FAU_logo.pdf  used on input line 120.
+Package pdftex.def Info: setup/FAU_logo.pdf  used on input line 125.
 (pdftex.def)             Requested size: 68.57733pt x 28.45274pt.
 [2] 
 AED: lastpage setting LastPage
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/scsl' undefined
-(Font)              using `OT1/cmss/m/sc' instead on input line 149.
+(Font)              using `OT1/cmss/m/sc' instead on input line 154.
 
 File: setup/logo.png Graphic file (type png)
 <use setup/logo.png>
-Package pdftex.def Info: setup/logo.png  used on input line 149.
+Package pdftex.def Info: setup/logo.png  used on input line 154.
 (pdftex.def)             Requested size: 28.45076pt x 28.45274pt.
 File: setup/FAU_logo.pdf Graphic file (type pdf)
 <use setup/FAU_logo.pdf>
-Package pdftex.def Info: setup/FAU_logo.pdf  used on input line 149.
+Package pdftex.def Info: setup/FAU_logo.pdf  used on input line 154.
 (pdftex.def)             Requested size: 68.57733pt x 28.45274pt.
 [3] (homework_template.aux)
 Package rerunfilecheck Info: File `homework_template.out' has not changed.
 (rerunfilecheck)             Checksum: FED12652D3F2FEAB4C00FF7C53BE586E;245.
  ) 
 Here is how much of TeX's memory you used:
- 28635 strings out of 477992
- 572229 string characters out of 2827466
- 928607 words of memory out of 3000000
- 46912 multiletter control sequences out of 15000+600000
+ 28636 strings out of 477992
+ 572250 string characters out of 2827466
+ 931607 words of memory out of 3000000
+ 46913 multiletter control sequences out of 15000+600000
  476944 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,26n,123p,554b,621s stack positions out of 10000i,1000n,20000p,200000b,80000s
@@ -1165,7 +1201,7 @@ msfonts/cm/cmssi10.pfb><C:/Users/pramb/AppData/Local/Programs/MiKTeX/fonts/type
 fonts/type1/public/amsfonts/cm/cmssi8.pfb><C:/Users/pramb/AppData/Local/Program
 s/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/pramb/AppData/Loca
 l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on homework_template.pdf (3 pages, 460228 bytes).
+Output written on homework_template.pdf (3 pages, 461279 bytes).
 PDF statistics:
  154 PDF objects out of 1000 (max. 8388607)
  11 named destinations out of 1000 (max. 500000)

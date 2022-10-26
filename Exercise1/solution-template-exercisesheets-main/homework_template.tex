@@ -99,7 +99,7 @@ Why are ((g)) and ((h)) different?\\
 
 
   \exercise
- \(\pi(x) < \frac{x}{ln(x) - 4} \) mit \(x = 2^{\frac{n}{2}}\) und \(n = 2048\)\\
+ \(\pi(x) < \frac{x}{ln(x) - 4} \) mit \(x = 2^{\frac{n}{2}}\) und \(n = 2048 = 2^{11}\)\\
  \begin{flalign*}
  	Pr[Coll] &= Pr [(p = p' ) \lor (p = q') \lor (q = p') \lor (q = q')]&\\
  	&\le Pr [p = p' ] + Pr [p = q'] + Pr [q = p'] + Pr[q = q'] &\\
@@ -116,7 +116,12 @@ Why are ((g)) and ((h)) different?\\
  	&= \sum_{j = 1}^{n} (j-1) \cdot  \left[\frac{4 \cdot (\frac{n}{2} \cdot \ln 2 - 4)}{2^{\frac{n}{2}}}\right]\\
  	&= \frac{(n-1)\cdot n}{2} \cdot  \left[\frac{4 \cdot (\frac{n}{2} \cdot \ln 2 - 4)}{2^{\frac{n}{2}}}\right]\\
  	&\le \frac{n^2}{2} \cdot  \left[\frac{4 \cdot (\frac{n}{2} \cdot \ln 2 - 4)}{2^{\frac{n}{2}}}\right]\\
- 	&=  ...
+ 	&=  \frac{n^3 \cdot \ln 2 - 8 \cdot n^2} {2^{\frac{n}{2}}}\\
+ 	&=  \frac{(2^{11})^3 \cdot \ln 2 - 8 \cdot (2^{11})^2} {2^{\frac{2^{11}}{2}}}\\
+ 	&=  \frac{2^{33} \cdot \ln 2 - 2³ \cdot 2^{22}} {2^{(2^{10})}}\\
+ 	&\le  \frac{2^{33} \cdot 2 - 2³ \cdot 2^{22}} {2^{1024}}\\
+ 	&\le  \frac{2^{34}} {2^{1024}}\\
+ 	&= 2^{-990}
  \end{flalign*}
 % 	Here is the solution for Exercise 1.1. Reference to \Cref{fig:Example}.
 % 	2222
