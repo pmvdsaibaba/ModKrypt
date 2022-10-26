@@ -3,7 +3,7 @@
 \input{setup/packages.tex}
 
 % Fill these values with the ones you need
-\def\authors{Saibaba, Teammate2, Teammate3, Teammate4}
+\def\authors{Theresa, Celine, Prisca, Saibaba}
 \def\date{\today}
 \def\sheetno{1}
 
@@ -83,33 +83,50 @@
 
 
 
- \exercise
- 	Here is the solution for Exercise 1.1. Reference to \Cref{fig:Example}.
- 	2222
 
- 	\begin{figure}[h]
- 		\center
- 		\includegraphics[width=2cm]{figures/logo}
- 		\caption{Example Figure}
- 		\label{fig:Example}	
- 	\end{figure}
+  \exercise
+ \(\pi(x) < \frac{x}{ln(x) - 4} \) mit \(x = 2^{\frac{n}{2}}\) und \(n = 2048\)\\
+ \begin{flalign*}
+ 	Coll &= Pr [(p = p' ) \lor (p = q') \lor (q = p') \lor (q = q')]&\\
+ 	&\le Pr [p = p' ] + Pr [p = q'] + Pr [q = p'] + Pr[q = q'] &\\
+ 	&= \frac{4}{\pi(x)} &\\
+ 	&< \frac{4 \cdot (\ln x -4)}{x} &\\
+ 	&=  \frac{4 \cdot (\ln x -4)}{x}&\\
+ 	&=  \frac{4 \cdot (\ln 2^{\frac{n}{2}} -4)}{2^{\frac{n}{2}}}&\\
+ 	&=  \frac{4 \cdot (\frac{n}{2} \cdot \ln 2 - 4)}{2^{\frac{n}{2}}}
+ \end{flalign*}
+ \begin{flalign*}
+ 	Pr[\bigcup_{1 \le i < j \le n} Coll_{i,j}] &\le \sum_{1 \le i < j \le n} Pr [Coll_{i,j}]&\\
+ 	&= \sum_{1 \le i < j \le n} Pr \left[\frac{4 \cdot (\frac{n}{2} \cdot \ln 2 - 4)}{2^{\frac{n}{2}}}\right]\\
+ 	&= \sum_{j = 1}^{n} \sum_{i = 1}^{j-1} Pr \left[\frac{4 \cdot (\frac{n}{2} \cdot \ln 2 - 4)}{2^{\frac{n}{2}}}\right]\\
+ 	&=  \frac{4 \cdot (\frac{n}{2} \cdot \ln 2 - 4)}{2^{\frac{n}{2}}}
+ \end{flalign*}
+% 	Here is the solution for Exercise 1.1. Reference to \Cref{fig:Example}.
+% 	2222
+%
+% 	\begin{figure}[h]
+% 		\center
+% 		\includegraphics[width=2cm]{figures/logo}
+% 		\caption{Example Figure}
+% 		\label{fig:Example}	
+% 	\end{figure}
+ \exercise
+% \exercise
+%    % For reference, look at line 12
+% 	\procedure[linenumbering]{$\Enc(m)$}{ % I defined \Enc as macro in the file ./setup/macros.tex
+% 		k \sample \GG \\
+% 		c \gets \Enc(k, m) \\
+% 		\pcreturn (k, c)
+% 	}
 
- \exercise
-    % For reference, look at line 12
- 	\procedure[linenumbering]{$\Enc(m)$}{ % I defined \Enc as macro in the file ./setup/macros.tex
- 		k \sample \GG \\
- 		c \gets \Enc(k, m) \\
- 		\pcreturn (k, c)
- 	}
-
- \exercise
-    % For reference, look at line 12
- 	\procedure[linenumbering]{$\Enc(m)$}{ % I defined \Enc as macro in the file ./setup/macros.tex
- 		k \sample \GG \\
- 		c \gets \Enc(k, m) \\
- 		\pcreturn (k, c)
- 	}
- 
- \exercise
- \exercise
+% \exercise
+%    % For reference, look at line 12
+% 	\procedure[linenumbering]{$\Enc(m)$}{ % I defined \Enc as macro in the file ./setup/macros.tex
+% 		k \sample \GG \\
+% 		c \gets \Enc(k, m) \\
+% 		\pcreturn (k, c)
+% 	}
+% 
+% \exercise
+% \exercise
 \end{document}
