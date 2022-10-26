@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.23)  26 OCT 2022 17:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.23)  26 OCT 2022 18:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -790,53 +790,53 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
 
+Underfull \hbox (badness 10000) in paragraph at lines 19--21
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 24--27
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 29--38
+Underfull \hbox (badness 10000) in paragraph at lines 30--38
 
  []
 
-LaTeX Font Info:    Trying to load font information for TS1+cmss on input line 42.
+LaTeX Font Info:    Trying to load font information for TS1+cmss on input line 44.
 (c:/texlive/2022/texmf-dist/tex/latex/base/ts1cmss.fd
 File: ts1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-Underfull \hbox (badness 10000) in paragraph at lines 41--43
+Underfull \hbox (badness 10000) in paragraph at lines 43--45
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--46
+Underfull \hbox (badness 10000) in paragraph at lines 46--48
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 47--49
-
- []
-
-LaTeX Font Info:    Trying to load font information for U+msa on input line 50.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 49.
 (c:/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 50.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 49.
  (c:/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/scsl' undefined
-(Font)              using `OT1/cmss/m/sc' instead on input line 50.
+(Font)              using `OT1/cmss/m/sc' instead on input line 49.
 
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <17.28> not available
-(Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 50.
+(Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 49.
 
 <setup/logo.png, id=35, 158.41583pt x 158.41583pt>
 File: setup/logo.png Graphic file (type png)
 <use setup/logo.png>
-Package pdftex.def Info: setup/logo.png  used on input line 50.
+Package pdftex.def Info: setup/logo.png  used on input line 49.
 (pdftex.def)             Requested size: 28.45076pt x 28.45274pt.
 
 
@@ -844,7 +844,7 @@ pdfTeX warning: pdflatex.exe (file ./setup/FAU_logo.pdf): PDF inclusion: found P
 <setup/FAU_logo.pdf, id=37, 548.35236pt x 227.51097pt>
 File: setup/FAU_logo.pdf Graphic file (type pdf)
 <use setup/FAU_logo.pdf>
-Package pdftex.def Info: setup/FAU_logo.pdf  used on input line 50.
+Package pdftex.def Info: setup/FAU_logo.pdf  used on input line 49.
 (pdftex.def)             Requested size: 68.57733pt x 28.45274pt.
 
 Package scrlayer-scrpage Warning: \headheight to low.
@@ -854,7 +854,7 @@ Package scrlayer-scrpage Warning: \headheight to low.
 (scrlayer-scrpage)                processing, but you should do this yourself,
 (scrlayer-scrpage)                e.g., setting geometry's option
 (scrlayer-scrpage)                `head=87.9479pt'.
-(scrlayer-scrpage)                I'll also decrease \topmargin on input line 50.
+(scrlayer-scrpage)                I'll also decrease \topmargin on input line 49.
 
 
 Overfull \vbox (75.9479pt too high) has occurred while \output is active []
@@ -862,90 +862,101 @@ Overfull \vbox (75.9479pt too high) has occurred while \output is active []
  [1{c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
  <./setup/logo.png> <./setup/FAU_logo.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 56--68
+Underfull \hbox (badness 10000) in paragraph at lines 49--63
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 99--100
+Underfull \hbox (badness 10000) in paragraph at lines 49--63
 
  []
 
 
-LaTeX Warning: Command \textthreesuperior invalid in math mode on input line 122.
+Underfull \hbox (badness 10000) in paragraph at lines 72--84
+
+ []
 
 
-LaTeX Warning: Command \textthreesuperior invalid in math mode on input line 122.
+Underfull \hbox (badness 10000) in paragraph at lines 115--116
 
-Missing character: There is no ³ in font cmr12!
+ []
 
-LaTeX Warning: Command \textthreesuperior invalid in math mode on input line 122.
-
-
-LaTeX Warning: Command \textthreesuperior invalid in math mode on input line 122.
-
-Missing character: There is no ³ in font cmr12!
-
-LaTeX Warning: Command \textthreesuperior invalid in math mode on input line 122.
-
-
-LaTeX Warning: Command \textthreesuperior invalid in math mode on input line 122.
-
-Missing character: There is no ³ in font cmr12!
-
-LaTeX Warning: Command \textthreesuperior invalid in math mode on input line 122.
-
-
-LaTeX Warning: Command \textthreesuperior invalid in math mode on input line 122.
-
-Missing character: There is no ³ in font cmr12!
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/scsl' undefined
-(Font)              using `OT1/cmss/m/sc' instead on input line 122.
+(Font)              using `OT1/cmss/m/sc' instead on input line 124.
 
 File: setup/logo.png Graphic file (type png)
 <use setup/logo.png>
-Package pdftex.def Info: setup/logo.png  used on input line 122.
+Package pdftex.def Info: setup/logo.png  used on input line 124.
 (pdftex.def)             Requested size: 28.45076pt x 28.45274pt.
 File: setup/FAU_logo.pdf Graphic file (type pdf)
 <use setup/FAU_logo.pdf>
-Package pdftex.def Info: setup/FAU_logo.pdf  used on input line 122.
+Package pdftex.def Info: setup/FAU_logo.pdf  used on input line 124.
 (pdftex.def)             Requested size: 68.57733pt x 28.45274pt.
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 133--136
 
- []
+LaTeX Warning: Command \textthreesuperior invalid in math mode on input line 138.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 137--146
+LaTeX Warning: Command \textthreesuperior invalid in math mode on input line 138.
+
+Missing character: There is no ³ in font cmr12!
+
+LaTeX Warning: Command \textthreesuperior invalid in math mode on input line 138.
+
+
+LaTeX Warning: Command \textthreesuperior invalid in math mode on input line 138.
+
+Missing character: There is no ³ in font cmr12!
+
+LaTeX Warning: Command \textthreesuperior invalid in math mode on input line 138.
+
+
+LaTeX Warning: Command \textthreesuperior invalid in math mode on input line 138.
+
+Missing character: There is no ³ in font cmr12!
+
+LaTeX Warning: Command \textthreesuperior invalid in math mode on input line 138.
+
+
+LaTeX Warning: Command \textthreesuperior invalid in math mode on input line 138.
+
+Missing character: There is no ³ in font cmr12!
+
+Underfull \hbox (badness 10000) in paragraph at lines 149--152
 
  []
 
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/scsl' undefined
-(Font)              using `OT1/cmss/m/sc' instead on input line 146.
+(Font)              using `OT1/cmss/m/sc' instead on input line 152.
 
 File: setup/logo.png Graphic file (type png)
 <use setup/logo.png>
-Package pdftex.def Info: setup/logo.png  used on input line 146.
+Package pdftex.def Info: setup/logo.png  used on input line 152.
 (pdftex.def)             Requested size: 28.45076pt x 28.45274pt.
 File: setup/FAU_logo.pdf Graphic file (type pdf)
 <use setup/FAU_logo.pdf>
-Package pdftex.def Info: setup/FAU_logo.pdf  used on input line 146.
+Package pdftex.def Info: setup/FAU_logo.pdf  used on input line 152.
 (pdftex.def)             Requested size: 68.57733pt x 28.45274pt.
-[3] 
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 153--162
+
+ []
+
+
 AED: lastpage setting LastPage
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/scsl' undefined
-(Font)              using `OT1/cmss/m/sc' instead on input line 147.
+(Font)              using `OT1/cmss/m/sc' instead on input line 163.
 
 File: setup/logo.png Graphic file (type png)
 <use setup/logo.png>
-Package pdftex.def Info: setup/logo.png  used on input line 147.
+Package pdftex.def Info: setup/logo.png  used on input line 163.
 (pdftex.def)             Requested size: 28.45076pt x 28.45274pt.
 File: setup/FAU_logo.pdf Graphic file (type pdf)
 <use setup/FAU_logo.pdf>
-Package pdftex.def Info: setup/FAU_logo.pdf  used on input line 147.
+Package pdftex.def Info: setup/FAU_logo.pdf  used on input line 163.
 (pdftex.def)             Requested size: 68.57733pt x 28.45274pt.
 [4] (./homework_template.aux)
 Package rerunfilecheck Info: File `homework_template.out' has not changed.
@@ -954,13 +965,13 @@ Package rerunfilecheck Info: File `homework_template.out' has not changed.
 Here is how much of TeX's memory you used:
  28637 strings out of 475071
  564736 string characters out of 5782907
- 973791 words of memory out of 5000000
+ 977791 words of memory out of 5000000
  49543 multiletter control sequences out of 15000+600000
  476944 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,26n,123p,650b,621s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfss1200.pfb>
-Output written on homework_template.pdf (4 pages, 449972 bytes).
+Output written on homework_template.pdf (4 pages, 450116 bytes).
 PDF statistics:
  163 PDF objects out of 1000 (max. 8388607)
  115 compressed objects within 2 object streams
