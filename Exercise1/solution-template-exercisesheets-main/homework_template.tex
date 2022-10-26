@@ -18,9 +18,11 @@
  \exercise
 	NO ONE SHALL BE SUBJECTED TO ARBITRARY INTERFERENCE WITH HIS PRIVACY FAMILY HOME OR CORRESPONDENCE NOR TO ATTACKS UPON HIS HONOUR AND REPUTATION EVERYONE HAS THE RIGHT TO THE PROTECTION OF THE LAW AGAINST SUCH INTERFERENCE OR ATTACKS
 
-	Decrypt: KVUMDLQXTZGEYBIFWRAPHSONCJ
+	
 
  \exercise
+ 	Key: KVUMDLQXTZGEYBIFWRAPHSONCJ \\
+ 	\newline
  	FEW FALSE IDEAS HAVE MORE FIRMLY GRIPPED THE MINDS OF SO MANY INTELLIGENT MEN THAN THE ONE THAT IF THEY JUST TRIED THEY COULD INVENT A CIPHER THAT NO UEKONE COULD BREAK
 
  \exercise
@@ -30,9 +32,9 @@
 	THERE IS NO SHARP DISTINCTION BETWEEN BANANAS AND PLANTAINS ESPECIALLY IN THE AMERICAS AND EUROPE BANANA USUALLY REFERS TO SOFT SWEET DESSERT BANANAS 
 	PARTICULARLY THOSE OF THE CAVENDISH GROUP WHICH ARE THE MAIN EXPORTS FROM BANANA GROWING COUNTRIES BY CONTRAST MUSACULTIVARS WITH FIRMERST ARCHIER FRUIT ARE CALLED 
 	PLANTAINS IN OTHER REGIONS SUCH AS SOUTH EAST ASIA MANY MORE KINDS OF BANANA ARE GROWN AND EATEN SO THE SIMPLE TWO FOLD DISTINCTION IS NOT USEFUL AND IS NOT 
-	MADE IN LOCAL LANGUAGES
-
-	key: crypto
+	MADE IN LOCAL LANGUAGES \\
+	\newline 
+	\noindent key: crypto
 
 
  \exercise
@@ -54,40 +56,52 @@
 
 
  \exercise
+(a) Pr [D is even] = 0.5\\
+(b) Pr [H] = 0.5\\
+(c) Pr [D is prime] = 0.5\\
+(d) Pr [D is prime\(\vert\)H] = 0.5\\
+(e) Pr [D is prime\(\vert\)D is even] = \(\frac{1}{3}\)\\
+(f) Pr [D is prime \(\land \) D is even] = \(\frac{1}{6}\) \\
+(g) Pr [D is prime \(\lor \) D is even] = \(\frac{5}{6}\) \\
+(h) Pr [D is prime] + Pr [D is even] = 1\\
+Why are ((d)) and ((e)) different, even though Pr [H] = Pr [D is even]?\\
+\indent In ((d)) are the events independent from each other, in ((e)) not.\\
+Why are ((g)) and ((h)) different?\\
+\indent In ((g)) counts \(D=2\) one time, in ((h)) is it in both events contained.
 
-   	Pr(D is even) = 1/2
-  
-
-  	Pr(H) = 1/2
-
-  
-  	Pr(D is prime) = 1/2
-
-  
-  	Pr(D is prime/H) = Pr(D is prime) = 1/2
-	
-
-  	Pr(D is prime/ D is even) = 1/3
-
-
-  % Pr(D is prime \land D is even) = 1/6
-  % Pr(D is prime \land D is even) = 1/6
-  	Pr(D is prime and D is even) = 1/6
-
-
-  	Pr(D is prime or D is even) = 5/6
-
-
- 	Pr(D is even) + Pr(D is prime) = 1/2 + 1/2 = 1
-
-
-
+%   	Pr(D is even) = 1/2
+%  
+%
+%  	Pr(H) = 1/2
+%
+%  
+%  	Pr(D is prime) = 1/2
+%
+%  
+%  	Pr(D is prime/H) = Pr(D is prime) = 1/2
+%	
+%
+%  	Pr(D is prime/ D is even) = 1/3
+%
+%
+%  % Pr(D is prime \land D is even) = 1/6
+%  % Pr(D is prime \land D is even) = 1/6
+%  	Pr(D is prime and D is even) = 1/6
+%
+%
+%  	Pr(D is prime or D is even) = 5/6
+%
+%
+% 	Pr(D is even) + Pr(D is prime) = 1/2 + 1/2 = 1
+%
+%
+%
 
 
   \exercise
  \(\pi(x) < \frac{x}{ln(x) - 4} \) mit \(x = 2^{\frac{n}{2}}\) und \(n = 2048\)\\
  \begin{flalign*}
- 	Coll &= Pr [(p = p' ) \lor (p = q') \lor (q = p') \lor (q = q')]&\\
+ 	Pr[Coll] &= Pr [(p = p' ) \lor (p = q') \lor (q = p') \lor (q = q')]&\\
  	&\le Pr [p = p' ] + Pr [p = q'] + Pr [q = p'] + Pr[q = q'] &\\
  	&= \frac{4}{\pi(x)} &\\
  	&< \frac{4 \cdot (\ln x -4)}{x} &\\
@@ -97,9 +111,12 @@
  \end{flalign*}
  \begin{flalign*}
  	Pr[\bigcup_{1 \le i < j \le n} Coll_{i,j}] &\le \sum_{1 \le i < j \le n} Pr [Coll_{i,j}]&\\
- 	&= \sum_{1 \le i < j \le n} Pr \left[\frac{4 \cdot (\frac{n}{2} \cdot \ln 2 - 4)}{2^{\frac{n}{2}}}\right]\\
- 	&= \sum_{j = 1}^{n} \sum_{i = 1}^{j-1} Pr \left[\frac{4 \cdot (\frac{n}{2} \cdot \ln 2 - 4)}{2^{\frac{n}{2}}}\right]\\
- 	&=  \frac{4 \cdot (\frac{n}{2} \cdot \ln 2 - 4)}{2^{\frac{n}{2}}}
+ 	&= \sum_{1 \le i < j \le n}  \left[\frac{4 \cdot (\frac{n}{2} \cdot \ln 2 - 4)}{2^{\frac{n}{2}}}\right]\\
+ 	&= \sum_{j = 1}^{n} \sum_{i = 1}^{j-1}  \left[\frac{4 \cdot (\frac{n}{2} \cdot \ln 2 - 4)}{2^{\frac{n}{2}}}\right]\\
+ 	&= \sum_{j = 1}^{n} (j-1) \cdot  \left[\frac{4 \cdot (\frac{n}{2} \cdot \ln 2 - 4)}{2^{\frac{n}{2}}}\right]\\
+ 	&= \frac{(n-1)\cdot n}{2} \cdot  \left[\frac{4 \cdot (\frac{n}{2} \cdot \ln 2 - 4)}{2^{\frac{n}{2}}}\right]\\
+ 	&\le \frac{n^2}{2} \cdot  \left[\frac{4 \cdot (\frac{n}{2} \cdot \ln 2 - 4)}{2^{\frac{n}{2}}}\right]\\
+ 	&=  ...
  \end{flalign*}
 % 	Here is the solution for Exercise 1.1. Reference to \Cref{fig:Example}.
 % 	2222
