@@ -17,18 +17,52 @@
 \item[(d)]
 		Is \(f(x) + g(x)\) negligible?\\
 		\(f(x)\) negligible \(\Rightarrow f(x) < \frac{1}{p(x)}\) (Definition 0.1).\\
-		\(g(x)\) negligible \(\Rightarrow g(x) < \frac{1}{p'(x)}\) (Definition 0.1).\\
+		\(g(x)\) negligible \(\Rightarrow g(x) < \frac{1}{p'(x)}\) (Definition 0.1).
 		\begin{flalign*}
 			\Rightarrow f(x) + g(x) &< \frac{1}{p(x)} + \frac{1}{p'(x)}&\\
 			&= \frac{p'(x) + p(x)}{p(x) \cdot p'(x)}&\\
 			&= \frac{1}{\frac{p(x) \cdot p'(x)}{p'(x) + p(x)}}
 		\end{flalign*}
-		Addition, multiplication and division of two polynomials results in another polynomial. Because of that the denominator (\(\frac{p(x) \cdot p'(x)}{p'(x) + p(x)}\)) can also be any polynomial.\\
+		Addition, multiplication and division of two polynomials results in another polynomial. \(p(x)\) and \(p'(x)\) can be any polynomials. Because of that the denominator (\(\frac{p(x) \cdot p'(x)}{p'(x) + p(x)}\)) can also be any polynomial.\\
 		\( \Rightarrow f(x) + g(x)\) is  negligible.
 \item[(e)]
+		Is \(f(x) \cdot q(x)\) negligible?\\
+		\(f(x)\) negligible \(\Rightarrow f(x) < \frac{1}{p(x)}\) (Definition 0.1).\\
+		\(q(x)\) is a positive polynomial.
+		\begin{flalign*}
+			\Rightarrow f(x)  &< \frac{1}{p(x)} \hspace{1cm} \vert \cdot q(x), q(x) positive & \\
+			f(x) \cdot q(x)	&< \frac{q(x)}{p(x)}  &\\
+			f(x) \cdot q(x)	&< \frac{1}{\frac{p(x)}{q(x)}} \\
+		\end{flalign*}
+		Division of two polynomials results in another polynomial. \(p(x)\) can be any polynomial. So the denominator (\(\frac{p(x)}{q(x)}\)) can also be any polynomial.\\
+		\( \Rightarrow f(x) \cdot q(x)\) is  negligible.
 \item[(f)]
+		Is \(\frac{f(x)} {g(x)}\) negligible?\\
+		\(f(x)\) negligible \(\Rightarrow f(x) < \frac{1}{p(x)}\) (Definition 0.1).\\
+		\(g(x)\) negligible \(\Rightarrow g(x) < \frac{1}{p'(x)}\) (Definition 0.1).
+		\begin{flalign*}
+			\Rightarrow \frac{f(x)} {g(x)} &< \frac {\frac{1}{p(x)}}{\frac{1}{p'(x)}}&\\
+			\frac{f(x)} {g(x)} &< \frac {1}{\frac{p(x)}{p'(x)}}&\\
+		\end{flalign*}
+		Division of two polynomials results in another polynomial. \(p(x)\) and \(p'(x)\)can be any polynomials. So the denominator (\(\frac{p(x)}{p'(x)}\)) can also be any polynomial.\\
+		\( \Rightarrow \frac{f(x)} {g(x)}\) is  negligible.
 \item[(g)]
+		Is \(2^{-1024} = \frac{1}{2^1024}\) negligible?\\
+		For the polynomial \(x^{1025}\) there is no \(N\), that for all \(x > N\) holds: \\
+		\(\frac{1}{2^{1024}}  < \frac{1}{x^{1025}}\), because \(2^{1024}\) is always smaller than \(x^{1025}\) for all \(x > 1\).\\
+		\( \Rightarrow 2^{-1024}\) is not negligible.
 \item[(h)]
+		Is \((f(x))^\frac{1}{q(x)}\) negligible?\\
+		\(f(x) = e^{-x}\) is negligible (see (a))\\
+		\(q(x) = x\) is a positive polynomial for all \(x > 0\)\\
+		\(\Rightarrow (e^{-x})^\frac{1}{x} =  e^{-1} = \frac{1}{e}\)\\
+		For the polynomial \(x^{2}\) there is no \(N\), that for all \(x > N\) holds: \\
+		\(\frac{1}{e}  < \frac{1}{x^2}\), because \(e\) is always smaller than \(x^{2}\) for all \(x \ge 2\).\\
+		\( \Rightarrow e^{-x}\) is not negligible.	\(\Rightarrow (f(x))^\frac{1}{q(x)}\) is not negligible.
 \item[(i)]
+		Is \(x^{-\log \log \log x}\) negligible?\\
+		For any polynomial \(x^c\), choose \(N=e^{e^{e^c}}\), then for all \(x > N\) holds:\\
+		\(x^{-\log \log \log x} < \frac{1}{x^c}\), because \(x^{\log \log \log x} > x^c\) and \(\log \log \log x > c\) for all \(x > N = e^{e^{e^c}}\).\\
+		\( \Rightarrow x^{-\log \log \log x}\) is negligible.
 \end{itemize}
 
