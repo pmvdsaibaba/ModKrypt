@@ -1,0 +1,8 @@
+If the one-time pad could be used twice with the same key and achieve perfect security, the following equation would be true: \\
+$Pr[M_{1} = m_{1} \wedge M_{2} = m_{2} | C_{1} = c_{1} \wedge  C_{2} = c_{2}] = Pr[M_{1} = m_{1} \wedge  M_{2} = m_{2}]$ \\
+\\
+Let $c_{1} = c_{2}, m_{1} \neq m_{2}$ \\
+Then $Pr[M_{1} = m_{1} \wedge  M_{2} = m_{2} |  C_{1} = c_{1} \wedge  C_{2} = c_{2}] = 0$ due to the correctness.\\
+But $Pr[M_{1} = m_{1} \wedge  M_{2} = m_{2}] = Pr[M_{1} = m_{1}] Pr[M_{2} = m_{2}] \neq  0$\\
+therefore\\
+$Pr[M_{1} = m_{1} \wedge M_{2} = m_{2} | C_{1} = c_{1} \wedge  C_{2} = c_{2}] \neq Pr[M_{1} = m_{1} \wedge  M_{2} = m_{2}] \;\;\;\; \square$
