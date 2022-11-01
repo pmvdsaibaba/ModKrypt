@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8) (preloaded format=pdflatex 2022.8.17)  29 OCT 2022 12:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8) (preloaded format=pdflatex 2022.8.17)  1 NOV 2022 11:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1038,7 +1038,7 @@ loading the todonotes package. on input line 15.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
-(exercise1.tex) (exercise3.tex
+(exercise1.tex) (exercise2.tex) (exercise3.tex
 LaTeX Font Info:    Trying to load font information for U+msa on input line 1.
 
 (C:\Users\pramb\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
@@ -1092,7 +1092,7 @@ Overfull \vbox (75.9479pt too high) has occurred while \output is active []
 
 [1{C:/Users/pramb/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
 
- <./setup/logo.png> <./setup/FAU_logo.pdf>]) (exercise4.tex)
+ <./setup/logo.png> <./setup/FAU_logo.pdf>]) (exercise4.tex) (exercise5.tex)
 
 AED: lastpage setting LastPage
 
@@ -1125,10 +1125,10 @@ Package rerunfilecheck Info: File `"Sheet 2".out' has not changed.
 (rerunfilecheck)             Checksum: 0C445C11D55D2836D41884682AE0087C;175.
  ) 
 Here is how much of TeX's memory you used:
- 28628 strings out of 477992
- 571904 string characters out of 2827466
+ 28638 strings out of 477992
+ 572228 string characters out of 2827466
  934591 words of memory out of 3000000
- 46902 multiletter control sequences out of 15000+600000
+ 46906 multiletter control sequences out of 15000+600000
  476601 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,26n,123p,546b,691s stack positions out of 10000i,1000n,20000p,200000b,80000s
@@ -1149,7 +1149,7 @@ lic/amsfonts/cm/cmssi8.pfb><C:/Users/pramb/AppData/Local/Programs/MiKTeX/fonts/
 type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/pramb/AppData/Local/Programs/MiKT
 eX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/pramb/AppData/Local/Progr
 ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on "Sheet 2.pdf" (3 pages, 456711 bytes).
+Output written on "Sheet 2.pdf" (3 pages, 456740 bytes).
 PDF statistics:
  141 PDF objects out of 1000 (max. 8388607)
  9 named destinations out of 1000 (max. 500000)
