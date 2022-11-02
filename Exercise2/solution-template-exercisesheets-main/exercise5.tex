@@ -1,0 +1,32 @@
+\begin{itemize}
+    \item[(a)]
+        For the case when length of message, $l_m$, is greater than  length of key,  $l_k$ ie., $l_m > l_k$\\\\
+        Some parts of the message are encrypted with the same key. It is like using
+        one time pad multiple times with same key. \\
+        
+        As mention in page 36 of \cite{texbook}, \textit{"the one-time pad scheme — as the name indicates — is
+        only 'secure' if used once (with the same key). ................ it is easy to see
+        informally that encrypting more than one message leaks a lot of information.
+        In particular, say two messages are encrypted using the same key k.
+        and thus learn something about the exclusive-or of the two messages. While
+        this may not seem very significant, it is enough to rule out any claims of perfect
+        secrecy when encrypting two messages. Furthermore, if the messages correspond to
+         English language text, then given the exclusive-or of sufficiently
+        many message pairs it is possible to perform frequency analysis .... and recover the messages themselves"}\\
+
+        Hence this scheme is not perfectly secure for $l_m > l_k$\\
+
+    \item[(b)]
+        This encryption scheme can be made secure by atleast restricing the length of key as close as length of message.
+        such that $ (l_m - l_k) $ is almost close to zero or $ (l_k / l_m) $ is almost approximated to 1. \\
+    
+        or contacting different keys in such a way $l_k > l_m$\\\\ 
+\end{itemize}
+
+\begin{thebibliography}{9} 
+    \bibitem{texbook}
+    Katz, J., \& Lindell, Y. (2014). Introduction to Modern Cryptography (2nd ed.). Chapman and Hall/CRC. https://doi.org/10.1201/b17668
+
+\end{thebibliography}
+
+
