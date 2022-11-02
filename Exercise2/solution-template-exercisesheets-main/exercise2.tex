@@ -5,6 +5,6 @@ Using the XOR of both messages we can decode the second message if we know the f
 c1  \(\xor\) c2 = (k  \(\xor\) m1)  \(\xor\) (k  \(\xor\) m2) =  (k  \(\xor\) k)  \(\xor\) (m1  \(\xor\) m2) = m1  \(\xor\) m2  \\
 \\
 Since we know one message starts with "ONE MUST " and contains " WITH " we get the start of the other message "OF VIOLEN" by reversing the XOR operation: \\
-(c1  \(\xor\) c2)    \(\xor\) m1 =  (m1  \(\xor\) m2)  \(\xor\) m2 = m2 \\
+(c1  \(\xor\) c2)    \(\xor\) m1 =  (m1  \(\xor\) m2)  \(\xor\) m2 =  m1  \(\xor\) (m2  \(\xor\) m2) =  m2 \\
 By guessing further letters from the context and finding the word " WITH " in one message we can decode the rest of the sentence. \\
 
