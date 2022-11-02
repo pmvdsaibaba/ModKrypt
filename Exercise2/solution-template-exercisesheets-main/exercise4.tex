@@ -1,13 +1,13 @@
-In this experiment the adversary A recieves a random message m* with its encryption c* from the challenger using the secret key (a, b). \\
-Adversary A now generates two messages m_{0} and m_{1} of the same length that must be distinct from m*. \\
-Our challenger chooses one of them and encrypts them using the encryption scheme c = a  \(\cdot\) m_{b} + b \\
+In this experiment the adversary A recieves a random message m* with its encryption c* from the challenger using the secret key (a, b). Adversary A now generates two messages m\(_{0}\) and m\(_{1}\) of the same length that must be distinct from m*. \\
+Our challenger chooses one of them and encrypts them using the encryption scheme:
+c = a  \(\cdot\) m\(_{b}\) + b \\
 \\
 To crack the encryption the adversary A has information about c*, m* and c. \\
 That means adversary A has to solve these equations: \\
 c* = a  \(\cdot\) m* + b \\
-c = a  \(\cdot\) m_{b} + b \\
+c = a  \(\cdot\) m\(_{b}\) + b \\
 to get the secret key (a,b).\\
-However since A is missing the information about m_{b} the system of equations is over-determined and not solvable. \\
+However since A is missing the information about m\(_{b}\) the system of equations is over-determined and not solvable. \\
 This means A has to guess which message was encrypted and \\
-Pr [TTP - SEC = 1] = 1 \frac{2} \\
+Pr [TTP - SEC = 1] = \(\frac{1}{2}\) \\
 
