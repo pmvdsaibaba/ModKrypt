@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8) (preloaded format=pdflatex 2022.8.17)  1 NOV 2022 11:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8) (preloaded format=pdflatex 2022.8.17)  7 NOV 2022 14:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1038,19 +1038,23 @@ loading the todonotes package. on input line 15.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
-(exercise1.tex) (exercise2.tex) 
-AED: lastpage setting LastPage
-LaTeX Font Info:    Trying to load font information for U+msa on input line 41.
+(exercise1.tex
+LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
 
 (C:\Users\pramb\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 41.
-
+LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
 
 (C:\Users\pramb\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
+))
+Underfull \hbox (badness 10000) in paragraph at lines 1--20
+
+ []
+
+(exercise2.tex) 
+AED: lastpage setting LastPage
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/scsl' undefined
 (Font)              using `OT1/cmss/m/sc' instead on input line 41.
@@ -1059,7 +1063,7 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/scsl' undefined
 LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <17.28> not available
 (Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 41.
 
-<setup/logo.png, id=22, 158.41583pt x 158.41583pt>
+<setup/logo.png, id=14, 158.41583pt x 158.41583pt>
 File: setup/logo.png Graphic file (type png)
 <use setup/logo.png>
 Package pdftex.def Info: setup/logo.png  used on input line 41.
@@ -1068,7 +1072,7 @@ Package pdftex.def Info: setup/logo.png  used on input line 41.
 
 pdfTeX warning: pdflatex.exe (file ./setup/FAU_logo.pdf): PDF inclusion: found 
 PDF version <1.6>, but at most version <1.5> allowed
-<setup/FAU_logo.pdf, id=24, 548.35236pt x 227.51097pt>
+<setup/FAU_logo.pdf, id=16, 548.35236pt x 227.51097pt>
 File: setup/FAU_logo.pdf Graphic file (type pdf)
 <use setup/FAU_logo.pdf>
 Package pdftex.def Info: setup/FAU_logo.pdf  used on input line 41.
@@ -1091,40 +1095,34 @@ Overfull \vbox (75.9479pt too high) has occurred while \output is active []
 [1{C:/Users/pramb/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
 
  <./setup/logo.png> <./setup/FAU_logo.pdf>] (Sheet 3.aux)
-
-Package rerunfilecheck Warning: File `"Sheet 3".out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `"Sheet 3".out':
-(rerunfilecheck)             Before: E41E9EC76E06A704C6361735357EF817;140
-(rerunfilecheck)             After:  C4A78932A39E3CA429CA63F6CA31738E;70.
+Package rerunfilecheck Info: File `"Sheet 3".out' has not changed.
+(rerunfilecheck)             Checksum: C4A78932A39E3CA429CA63F6CA31738E;70.
  ) 
 Here is how much of TeX's memory you used:
- 28619 strings out of 477992
- 571710 string characters out of 2827466
- 916591 words of memory out of 3000000
- 46899 multiletter control sequences out of 15000+600000
+ 28615 strings out of 477992
+ 571670 string characters out of 2827466
+ 932591 words of memory out of 3000000
+ 46897 multiletter control sequences out of 15000+600000
  476601 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,25n,123p,546b,618s stack positions out of 10000i,1000n,20000p,200000b,80000s
-
-pdfTeX warning (dest): name{section.4} has been referenced but does not exist, 
-replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section.3} has been referenced but does not exist, 
-replaced by a fixed one
-
-<C:/Users/pramb/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
-csc10.pfb><C:/Users/pramb/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
-onts/cm/cmss17.pfb><C:/Users/pramb/AppData/Local/Programs/MiKTeX/fonts/type1/pu
-blic/amsfonts/cm/cmssi10.pfb><C:/Users/pramb/AppData/Local/Programs/MiKTeX/font
-s/type1/public/amsfonts/cm/cmssi12.pfb><C:/Users/pramb/AppData/Local/Programs/M
-iKTeX/fonts/type1/public/amsfonts/cm/cmssi8.pfb>
-Output written on "Sheet 3.pdf" (1 page, 346005 bytes).
+<C:/Users/pramb/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmcsc10.pfb><C:/Users/pramb/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
+sfonts/cm/cmmi12.pfb><C:/Users/pramb/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/amsfonts/cm/cmmi8.pfb><C:/Users/pramb/AppData/Local/Programs/MiKTeX/font
+s/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/pramb/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/pramb/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Users/pramb/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss17.pfb><C:/Users/pramb/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi10.pfb><C:/Use
+rs/pramb/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi12.p
+fb><C:/Users/pramb/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmssi8.pfb><C:/Users/pramb/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
+sfonts/cm/cmsy10.pfb><C:/Users/pramb/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/amsfonts/cm/cmsy8.pfb>
+Output written on "Sheet 3.pdf" (1 page, 417873 bytes).
 PDF statistics:
- 75 PDF objects out of 1000 (max. 8388607)
- 6 named destinations out of 1000 (max. 500000)
- 55 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 102 PDF objects out of 1000 (max. 8388607)
+ 4 named destinations out of 1000 (max. 500000)
+ 39 words of extra memory for PDF output out of 10000 (max. 10000000)
 
