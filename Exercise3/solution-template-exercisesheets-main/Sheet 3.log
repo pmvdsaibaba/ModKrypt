@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8) (preloaded format=pdflatex 2022.8.17)  8 NOV 2022 11:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.8) (preloaded format=pdflatex 2022.8.17)  8 NOV 2022 11:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1048,12 +1048,12 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
 
 (C:\Users\pramb\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-))
-Underfull \hbox (badness 10000) in paragraph at lines 1--20
+)
+Underfull \hbox (badness 10000) in paragraph at lines 1--19
 
  []
 
-(exercise2.tex (exercise2_TS.tex
+) (exercise2.tex (exercise2_TS.tex
 Underfull \hbox (badness 10000) in paragraph at lines 15--16
 
  []
@@ -1154,7 +1154,7 @@ fb><C:/Users/pramb/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
 /cmssi8.pfb><C:/Users/pramb/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
 sfonts/cm/cmsy10.pfb><C:/Users/pramb/AppData/Local/Programs/MiKTeX/fonts/type1/
 public/amsfonts/cm/cmsy8.pfb>
-Output written on "Sheet 3.pdf" (2 pages, 426571 bytes).
+Output written on "Sheet 3.pdf" (2 pages, 426581 bytes).
 PDF statistics:
  107 PDF objects out of 1000 (max. 8388607)
  5 named destinations out of 1000 (max. 500000)

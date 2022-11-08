@@ -2,7 +2,7 @@ Trying some values:\\
 \begin{tabular}{llllll}
 	\(k = 2\) & \(a = 27\) & \(b = 72\) & \(c = \vert b - a \vert = 72 - 27 = 45 \) & \( d = 45\) & \(e = 54\)\\
 	\(k = 3\) & \(a = 398\) & \(b = 983\) & \(c = \vert 983 - 398 \vert = 585 \) & \( d = 585\) & \(e = 558\)\\
-	\(k = 3\) & \(a = 398\) & \(b = 938\) & \(c = \vert 983 - 938 \vert = 441\) & \( d = 441\) & \(e = 144\)\\
+	\(k = 3\) & \(a = 398\) & \(b = 938\) & \(c = \vert 983 - 398 \vert = 441\) & \( d = 441\) & \(e = 144\)\\
 	\(k = 3\) & \(a = 321\) & \(b = 213\) & \(c = \vert 321 - 213 \vert = 108\) & \( d = 18\) & \(e = 81\)\\
 \end{tabular}\\
 \\
@@ -14,5 +14,6 @@ If \(a_i < b_i\) then it is \((a_1 - b_1) + (a_2 - b_2) +... + (a_{i-1} - b_{i-1
 The sum of the digit of \(a\) has to be the same like the sum of the digits from \(b\), because \(b\) has the same digits like \(a\) only in an other order, so \(a_1 + a_2 + ... + a_n - (b_1 + b_2 + ... + b_n) = 0\).\\
 If \(a_i < b_i\) holds for \(y\) positions the sum of the digits is \(9\cdot y \). \(a\) and \(b\) have the same digits, so \(a_i < b_i\) holds at least for one position, so \(y \ge 1\).\\
 This argumentation is the same for \(b > a\), so the sum of the digits from \(c\), respectively \(d\) or \(e\), is always a multiple from \(9\).\\
-If now all but the last digit of \(e\) are given one can always determine the last digit, because the sum of all digits has to be a multiple of \(9\). If the sum of the digits is already \(9\), the last bit has to be \(9\) as well, because all 0-digits had erased. If this is not the case, we could not determine if the last digit has to be \(0\) or \(9\).\\
-So the described generator does not pass the next-character test.
+If now all but the last digit of \(e\) are given one can always determine the last digit, because the sum of all digits has to be a multiple of \(9\). So the described generator does not pass the next-character test.\\
+If the sum of the digits is already \(9\), the last bit has to be \(9\) as well, because all 0-digits had erased. If this is not the case, we could not determine if the last digit has to be \(0\) or \(9\).
+
