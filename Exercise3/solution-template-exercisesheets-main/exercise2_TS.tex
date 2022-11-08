@@ -4,18 +4,27 @@
 \item[(a)]
 	Is G\(_{a}\)(s) = G(s)\(\vert \vert\)0 a secure PRG? \\
 	No since the last bit is always 1. This bit is not uniformly at random because the probablitiy of that bit being 1 is 100\(\%\) instead of 50\(\%\). \\
+	\(\Rightarrow\)  G\(_{a}\) is a not a PRG
 \item[(b)]
 	Is G\(_{b}\)(s\(\vert \vert\)b) = G(s)\(\vert \vert\)b where \(\vert\)b\(\vert\) = 1 a secure PRG? \\
-	
+	Yes because adding a single random but fixed bit has the probability 50\(\%\) being 1 and  50\(\%\) being 0 meaning b is uniformly random.
+	b = \(\{0,1\}\) is a pseudorandom generator and the concatination of two pseudorandom number generators is a pseudorandom number generator itself.
+	Also since b is part of the argument G\(_{b}\) is deterministic. \\
+	\(\Rightarrow\)  G\(_{b}\) is a secure PRG
 \item[(c)]
 	Is G\(_{c}\)(s) = G(s\(\vert \vert\)0) a secure PRG? \\
 	
 \item[(d)]
-	Is G\(_{d}\)(s) = G(s\(\vert \vert\)\(0^{\vert s \vert}\) a secure PRG? \\
+	Is G\(_{d}\)(s) = G(s\(\vert \vert\)\(0^{\vert s \vert}\)) a secure PRG? \\
+
 \item[(e)]
-	Is G\(_{e}\)(s) = G(s) \(\xor 1^{ l(\vert s \vert}\) a secure PRG? \\
+	Is G\(_{e}\)(s) = G(s) \(\xor\) \(1^{ l(\vert s \vert}\) a secure PRG? \\
+	Yes because G(s)  \(\xor\) \(1^{ l(\vert s \vert}\) = G(s) and G(s) is per definition a secure PRG. \\
+	\(\Rightarrow\) Therefor G\(_{e}\)(s) is also a secure PRG.
 \item[(f)]
 	Is G\(_{f}\)(s) = \textit{trunc}(G(\textit{trunc}(s))) a secure PRG? \\
 	where \textit{trunc}(x) for a nonempty string x denotes all but the last bit of x. \\
-	(For this part, assume that l(n) \textgreater  n + 2, and ignore the fact that G\(_{f}\) is undefined on input strings of length 1.) \\
+	(For this part, assume that l(n) >  n + 2, and ignore the fact that G\(_{f}\) is undefined on input strings of length 1.) \\
+	\\
+	
 \end{itemize}
