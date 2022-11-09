@@ -21,7 +21,7 @@
 	Is G\(_{d}\)(s) = G(s\(\vert \vert\)\(0^{\vert s \vert}\)) a secure PRG? \\
 	Is G\(_{d}\)(s) = G(s\(\vert \vert\)0) a secure PRG? \\
 	Assume  G\(_{d}\)(s)  is not a secure PRG and an adversary A that can distinguish between  G\(_{d}\)(s) and a random generator g(s).\\
-	We construct \(\mathcal{B}\) that \(\mathcal{A}\)  and adds l(\(\vert\)b\(\vert\))-times 0 to each string s.\\
+	We construct \(\mathcal{B}\) that \(\mathcal{A}\)  and adds l(\(\vert\)s\(\vert\))-times 0 to each string s.\\
 	Since G(s) is a secure PRG and therfore its values uniformly distributed it follows that \(\mathcal{B}\) is as efficient as \(\mathcal{A}\).\\
 	\(\Rightarrow\) G\(_{d}\)(s) is a secure PRG.
 \item[(e)]
@@ -35,12 +35,12 @@
 \item[(f)]
 	Is G\(_{f}\)(s) = \textit{trunc}(G(\textit{trunc}(s))) a secure PRG? \\
 	where \textit{trunc}(x) for a nonempty string x denotes all but the last bit of x. \\
-	(For this part, assume that l(n) >  n + 2, and ignore the fact that G\(_{f}\) is undefined on input strings of length 1.) \\
+	(For this part, assume that l(n) \(>\)  n + 2, and ignore the fact that G\(_{f}\) is undefined on input strings of length 1.) \\
 	\\
 	Assume G\(_{f}\)(s) is not a secure PRG and an adversary \(\mathcal{A}\) can distinguish between G\(_{f}\)(s) and a random generator g(s).\\
 	We construct an adversary \(\mathcal{B}\) that evokes \(\mathcal{A}\) adds one bit b =\{0,1\} to  G\(_{f}\)(s).\\
 	For \(\mathcal{B}\) to distinguish the one case where b is set correctly from g(s) \(\mathcal{B}\) would have to distinguish G(\textit{trunc}(s)) from g(s).\\
-	However since G(s) is a secure definition by definition. Furthermore \(\mathcal{B}\) can't know what value \textit{trunc} has deleted from the string since 		G(s) is uniformly distributed.
+	However G(s) is a secure definition by definition. Furthermore \(\mathcal{B}\) can't know what value \textit{trunc} has deleted from the string since 		G(s) is uniformly distributed.
 	\(\Rightarrow\)  contradiction\\
 	\(\Rightarrow\) G\(_{f}\)(s) is a secure PRG.
 \end{itemize}
