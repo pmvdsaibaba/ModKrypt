@@ -13,13 +13,22 @@
 	\(\Rightarrow\)  G\(_{b}\) is a secure PRG\\
 \item[(c)]
 	Is G\(_{c}\)(s) = G(s\(\vert \vert\)0) a secure PRG? \\
-	Assume  G\(_{c}\)(s)  is not a secure PRG and an adversary A that can distinguish between  G\(_{c}\)(s) and a random generator g(s).\\
-	We construct \(\mathcal{B}\) that \(\mathcal{A}\)  and adds a 0 to each string s.\\
-	Since G(s) is a secure PRG and therfore its values uniformly distributed it follows that \(\mathcal{B}\) is as efficient as \(\mathcal{A}\).\\
+	Assume  G\(_{c}\)(s)  is not a secure PRG and an adversary \(\mathcal{A}\) that can distinguish G\(_{c}\)(s) from a random generator g(s).\\
+	We construct \(\mathcal{B}\) that invokes \(\mathcal{A}\)  and answers any query \(s\) by asking \(s\vert \vert 0\) to its own oracle, concatenating the answers and returning them to \(\mathcal{A}\).\\
+	\(\mathcal{A}\) has to decide if this is a random generator or not. 
+	Since G(s) is a secure PRG and therefore its values uniformly distributed it follows that \(\mathcal{B}\) is as efficient as \(\mathcal{A}\).\\
+	Now there are two cases: If G(s\(\vert \vert\)0) is a PRG, \(\mathcal{B}\) perfektly simulates G\(_{c}\)(s). In the case when G(s\(\vert \vert\)0) is a random generator, \(\mathcal{B}\) also simulates a random generator. 
+	It follows, that \(\mathcal{B}\) can distinguish
+	whenever \(\mathcal{A}\) can. As this would contradict the security of G(s), such an \(\mathcal{A}\) can not exist.\\
 	\(\Rightarrow\) G\(_{c}\)(s) is a secure PRG.
+%	Is G\(_{c}\)(s) = G(s\(\vert \vert\)0) a secure PRG? \\
+%	Assume  G\(_{c}\)(s)  is not a secure PRG and an adversary A that can distinguish between  G\(_{c}\)(s) and a random generator g(s).\\
+%	We construct \(\mathcal{B}\) that  \(\mathcal{A}\)  and adds a 0 to each string s.\\
+%	Since G(s) is a secure PRG and therfore its values uniformly distributed it follows that \(\mathcal{B}\) is as efficient as \(\mathcal{A}\).\\
+%	\(\Rightarrow\) G\(_{c}\)(s) is a secure PRG.
 \item[(d)]
 	Is G\(_{d}\)(s) = G(s\(\vert \vert\)\(0^{\vert s \vert}\)) a secure PRG? \\
-	Is G\(_{d}\)(s) = G(s\(\vert \vert\)0) a secure PRG? \\
+	%Is G\(_{d}\)(s) = G(s\(\vert \vert\)0) a secure PRG? \\
 	Assume  G\(_{d}\)(s)  is not a secure PRG and an adversary A that can distinguish between  G\(_{d}\)(s) and a random generator g(s).\\
 	We construct \(\mathcal{B}\) that \(\mathcal{A}\)  and adds l(\(\vert\)s\(\vert\))-times 0 to each string s.\\
 	Since G(s) is a secure PRG and therfore its values uniformly distributed it follows that \(\mathcal{B}\) is as efficient as \(\mathcal{A}\).\\
