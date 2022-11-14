@@ -1,0 +1,29 @@
+Let $G$ be a pseudorandom number generator with output of length 2n. We split the output in two 
+parts as 
+\begin{center}
+    $ G(x) := G^0(x) || G^1(x) \quad with \quad G^b(x) \in \{0,1\}^n $
+\end{center}
+
+
+So $ |G(s)| = 2n $.\\
+
+
+Given the construction $ G_n(s) $, denoted as the n-bit prefix of $ G(s)$, i.e.,
+\begin{center}
+    $ G_n(s) =   G^0(x) || 0^n $
+\end{center}
+
+And given the keyed function
+\begin{center}
+    $ F_k(x) =   G_n(k) \xor x $
+\end{center}
+
+so
+\begin{center}
+    $ F_k(x) =   G^0(x) || 0^n \xor x $
+\end{center}
+
+
+This shows us that last $n$ bits in this case is same as the input x. Hence this function can 
+be distinguished from a uniformly selected from a function $f$ by checking if the last $n$ bits of
+the output is same as the input $x$.
