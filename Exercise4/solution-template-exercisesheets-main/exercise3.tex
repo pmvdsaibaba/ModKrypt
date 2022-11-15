@@ -2,4 +2,31 @@
 not imply indistinguishability of encryptions under a chosen plaintext attack.\\
 \\
 We show this by a proof by contradiction. Let's assume that an arbitrary encryption scheme \(\Pi = (Gen, Enc, Dec)\) exists, that is EAV-Mult secure.\\
-\(\Pi' = (Gen', Enc", Dec')\) is constructed as follows:
+\(\Pi' = (Gen', Enc', Dec')\) is constructed as follows:\\
+\(Gen' = Gen\)\\
+\(Enc'\) and \(Dec'\) are constructed similar to the Chained Cipher Block Chaining: \\
+\(\underline{Enc'(k, m)}:\)\\
+\(IV \leftarrow \{0,1\}^{\lambda}\)\\
+\(c_0 := IV\), if invoked for the first time\\
+\(c_0 := c_n^{last\_invoke\_from\_Enc'}\)\\
+\(for\ i = 1, ..., l\ do \)\\
+\(\indent c_i = H^s \vert \vert(c_{i-1})Enc(k, m)\)\\
+\(return\ (c_0, ..., c_n)\)\\
+
+%\(\underline{Enc'(k, m)}:\)\\
+%\(IV \leftarrow \{0,1\}^{\lambda}\)\\
+%\(c_0 := IV\), if invoked for the first time\\
+%\(c_0 := c_n^{last\_invoke\_from\_Enc'}\)\\
+%\(for\ i = 1, ..., l\ do \)\\
+%\(\indent c_i = Enc(k, c_{i-1} \xor m)\)\\
+%\(return\ (c_0, ..., c_n)\)\\
+
+\(\underline{Dec'(k, c)}:\)\\
+\(IV := c_0\)\\
+\(for\ i = 1, ..., l\ do \)\\
+\(\indent m_i = c_{i-1} \xor Dec(k, c_{i})\)\\
+\\
+Proof, that \(Pi'\) remains EAV-mult secure:\\
+\\
+Describe a successful adversary against the CPA security of \(Pi'\):\\
+The adversary can choose the first message randomly. Then he knows that the recieved ciphertext is used as the IV for the next encryption. Because of this he can choose the next message adoptively. For example when he chooses the message like the recived cipehertext, he knows that the input to the encryption function is 0. So the adversary can influence every input to the encryption function 
