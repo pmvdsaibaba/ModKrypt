@@ -6,12 +6,11 @@ We show this by a proof by contradiction. Let's assume that an arbitrary encrypt
 \(Gen' = Gen\)\\
 \(Enc'\) and \(Dec'\) are constructed similar to the Chained Cipher Block Chaining: \\
 \(\underline{Enc'(k, m)}:\)\\
-\(IV \leftarrow \{0,1\}^{\lambda}\)\\
-\(c_0 := IV\), if invoked for the first time\\
-\(c_0 := c_n^{last\_invoke\_from\_Enc'}\)\\
-\(for\ i = 1, ..., l\ do \)\\
-\(\indent c_i = H^s \vert \vert(c_{i-1})Enc(k, m)\)\\
-\(return\ (c_0, ..., c_n)\)\\
+\(c \leftarrow Enc(k, m)\)\\
+\(if\ m = r:\), r is choosen uniformly at random, but is fixed for all encryptions\\
+\(\indent return\ r,k,c\)\\
+\(else:\)\\
+\(\indent return\ r,0,c\)\\
 
 %\(\underline{Enc'(k, m)}:\)\\
 %\(IV \leftarrow \{0,1\}^{\lambda}\)\\
@@ -21,12 +20,14 @@ We show this by a proof by contradiction. Let's assume that an arbitrary encrypt
 %\(\indent c_i = Enc(k, c_{i-1} \xor m)\)\\
 %\(return\ (c_0, ..., c_n)\)\\
 
-\(\underline{Dec'(k, c)}:\)\\
-\(IV := c_0\)\\
-\(for\ i = 1, ..., l\ do \)\\
-\(\indent m_i = c_{i-1} \xor Dec(k, c_{i})\)\\
+\noindent \(\underline{Dec'(k, c)}:\)\\
+\(parse(\perp, \perp, c)\)\\
+\(m \leftarrow  Dec(k,c)\)\\
+\(return\)\\
 \\
-Proof, that \(Pi'\) remains EAV-mult secure:\\
+Proof, that \(\Pi'\) remains EAV-mult secure:\\
+Proof by contradiction: We assume there is an adversary \(\mathcal{A}\) who can break \(\Pi'\). We then construct an adversary \(\mathcal{B}\) against \(\Pi\) as follows:
 \\
-Describe a successful adversary against the CPA security of \(Pi'\):\\
-The adversary can choose the first message randomly. Then he knows that the recieved ciphertext is used as the IV for the next encryption. Because of this he can choose the next message adoptively. For example when he chooses the message like the recived cipehertext, he knows that the input to the encryption function is 0. So the adversary can influence every input to the encryption function 
+Describe a successful adversary against the CPA security of \(\Pi'\):\\
+For the first call to the enncryption oracle, the adversary can choose the message randomly. It is very unlikly that he guesses the message so that \(m = r\). In this case, he would learn \(k\) immediatly. If the adversary doesn't guess the correct message he learns \(r\). With this information he can choose the next message correct with \(m = r\) and then learn \(k\). \\
+Because he knows all about the encryption except \(k\) yet, he now knows the complete encryption scheme and can distinguish for any two messages sent to the challenger, from which message he recieves the ciphertext. So the adversary can win the game with a probability of 1 which is greater than a negligible function.
