@@ -1,29 +1,50 @@
-Let $G$ be a pseudorandom number generator with output of length 2n. We split the output in two 
-parts as 
+Let adversary $A$ can choose can choose messages $x_1$ and $x_2$. Then corresponding keyed functions adversary
 \begin{center}
-    $ G(x) := G^0(x) || G^1(x) \quad with \quad G^b(x) \in \{0,1\}^n $
+    $ F_k(x_1) := G_n(k) \xor x_1 $ \\
+    $ F_k(x_2) := G_n(k) \xor x_2 $ \\
 \end{center}
 
+$A$ computes $ F_k(x_1) \xor F_k(x_2) $ which will be $ x_1 \xor x_2 $ \\
 
-So $ |G(s)| = 2n $.\\
+With this A can easily distingush from a uniformly selected function $f$ by checking 
 
-
-Given the construction $ G_n(s) $, denoted as the n-bit prefix of $ G(s)$, i.e.,
 \begin{center}
-    $ G_n(s) =   G^0(x) || 0^n $
+    $ (F_k(x_1) \xor F_k(x_2) ) \xor x_1 => x_1 \xor x_2 \xor x_1  = x_1$
 \end{center}
 
-And given the keyed function
+or 
 \begin{center}
-    $ F_k(x) =   G_n(k) \xor x $
+    $ (F_k(x_1) \xor F_k(x_2) ) \xor x_2 => x_1 \xor x_2 \xor x_2  = x_1$
 \end{center}
 
-so
-\begin{center}
-    $ F_k(x) =   G^0(x) || 0^n \xor x $
-\end{center}
+Hence this will not be a PRF as this keyed function can be distinguished from a uniformaly selected function.
+
+% Let $G$ be a pseudorandom number generator with output of length 2n. We split the output in two 
+% parts as 
+% \begin{center}
+%     $ G(x) := G^0(x) || G^1(x) \quad with \quad G^b(x) \in \{0,1\}^n $
+% \end{center}
 
 
-This shows us that last $n$ bits in this case is same as the input x. Hence this function is not a PRF as this function can 
-be distinguished from a uniformly selected function $f$ by checking if the last $n$ bits of
-the output is same as the input $x$.
+% So $ |G(s)| = 2n $.\\
+
+
+% Given the construction $ G_n(s) $, denoted as the n-bit prefix of $ G(s)$, i.e.,
+% \begin{center}
+%     $ G_n(s) =   G^0(x) || 0^n $
+% \end{center}
+
+% And given the keyed function
+% \begin{center}
+%     $ F_k(x) =   G_n(k) \xor x $
+% \end{center}
+
+% so
+% \begin{center}
+%     $ F_k(x) =   G^0(x) || 0^n \xor x $
+% \end{center}
+
+
+% This shows us that last $n$ bits in this case is same as the input x. Hence this function is not a PRF as this function can 
+% be distinguished from a uniformly selected function $f$ by checking if the last $n$ bits of
+% the output is same as the input $x$.
