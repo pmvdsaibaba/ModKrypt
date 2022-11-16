@@ -32,7 +32,9 @@ Proof by contradiction: We assume there is an adversary \(\mathcal{A}\) who can 
 	(r, 0, Enc(k,m_b^i)) & else\\
 \end{array}
 \right.	\)\\
-Then he forwards \(tup^1, tup^2, ... tup^t\) to \(\mathcal{A}\). Eventually \(\mathcal{A}\) outputs a bit \(b'\). The adversary \(\mathcal{B}\) outputs the same bit \(b'\).
+Then he forwards \(\left(tup^1, tup^2, ... tup^t\right)\) to \(\mathcal{A}\). Eventually \(\mathcal{A}\) outputs a bit \(b'\). The adversary \(\mathcal{B}\) outputs the same bit \(b'\).\\
+We see, \(\mathcal{B}\) is efficient, if \(\mathcal{A}\) is. \\
+To analyse the success, \\
 \\
 Describe a successful adversary against the CPA security of \(\Pi'\):\\
 For the first call to the enncryption oracle, the adversary can choose the message randomly. It is very unlikly that he guesses the message so that \(m = r\). In this case, he would learn \(k\) immediatly. If the adversary doesn't guess the correct message he learns \(r\). With this information he can choose the next message correct with \(m = r\) and then learn \(k\). \\
