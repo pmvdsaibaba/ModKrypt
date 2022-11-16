@@ -1,23 +1,22 @@
-Let adversary $A$ can choose can choose messages $x_1$ and $x_2$. Then corresponding keyed functions 
+Let adversary $A$ can choose can choose $x_1$ and $x_2$. Then corresponding keyed functions 
 \begin{center}
     $ F_k(x_1) := G_n(k) \xor x_1 $ \\
     $ F_k(x_2) := G_n(k) \xor x_2 $ \\
 \end{center}
 
-A can compute $ F_k(x_1) \xor F_k(x_2) =  x_1 \xor x_2 $ \\
+A can compute $ F_k(x_1) \xor F_k(x_2) =  (G_n(k) \xor x_1) \xor (G_n(k) \xor x_2) =  x_1 \xor x_2 $ \\
 
-With this adversary can easily distingush from a uniformly selected function $f$ by checking 
+Hence this will not be a PRF as adversary can easily distingush from a uniformly selected function $f$ by checking 
 
 \begin{center}
-    $ (F_k(x_1) \xor F_k(x_2) ) \xor x_1 => x_1 \xor x_2 \xor x_1  = x_2$
+    $ (F_k(x_1) \xor F_k(x_2) ) \xor x_1 => (x_1 \xor x_2) \xor x_1  = x_2$
 \end{center}
 
 or 
 \begin{center}
-    $ (F_k(x_1) \xor F_k(x_2) ) \xor x_2 => x_1 \xor x_2 \xor x_2  = x_1$
+    $ (F_k(x_1) \xor F_k(x_2) ) \xor x_2 => (x_1 \xor x_2) \xor x_2  = x_1$
 \end{center}
 
-Hence this will not be a PRF as this keyed function can be distinguished from a uniformaly selected function.
 
 % Let $G$ be a pseudorandom number generator with output of length 2n. We split the output in two 
 % parts as 
