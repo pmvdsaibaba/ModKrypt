@@ -1,0 +1,49 @@
+\begin{itemize}
+\item[(a)]
+	F\(_{k}\)'(x) = F\(_{k}\)(x  \(\xor\)  \(1^{n}\)) \\
+	Assume F\(_{k}\)'(x) is not a secure PRF and an adversary \(\mathcal{A}\) can distinguish F\(_{k}\)'(x) and a random function f(x).\\
+	We construct \(\mathcal{B}\), an adversary for F\(_{k}\)(x) that runs \(\mathcal{A}\) as a subrutine.\\
+	\(\mathcal{B}\) queries \(\mathcal{A}\) with x  \(\xor\)  \(1^{n}\) and outputs what x  \(\xor\)  \(1^{n}\) outputs.\\
+	\(\mathcal{B}\) is an efficient adversary to  F\(_{k}\)(x).\\
+	But  F\(_{k}\)(x) is secure and \(\mathcal{B}\)  can't exist. \\
+	\(\Rightarrow\) F\(_{k}\)'(x) is a secure PRF \\
+
+\item[(b)]
+	F\(_{k}\)'(x) =  F\(_{k}\)(x) \(\vert \vert\) F\(_{k}\)(x  \(\xor\)  \(1^{n}\)) \\
+	\(\Rightarrow\) F\(_{k}\)'(x) is not a secure PRF.\\
+	Adversary \(\mathcal{A}\) can make two queries x\(_{1}\) = 000, x\(_{2}\) = 111 \\
+	F\(_{k}\)'(x\(_{1}\)) = F\(_{k}\)(000)  \(\vert \vert\) F\(_{k}\)(111) = F\(_{k}\)(x\(_{1}\))  \(\vert \vert\) F\(_{k}\)(x\(_{2}\)) \\
+	F\(_{k}\)'(x\(_{2}\)) = F\(_{k}\)(111)  \(\vert \vert\) F\(_{k}\)(000) = F\(_{k}\)(x\(_{2}\))  \(\vert \vert\) F\(_{k}\)(x\(_{1}\)) \\
+	The left and right halves of the results correspond to each other and vice versa and produce not uniformly random results.\\
+	The adversary can therefor distinguish F\(_{k}\)'(x) from a true random function.\\
+	
+\item[(c)]
+	F\(_{k}\)'(x\(_{1}\)\(\vert \vert\)x\(_{2}\)) =  F\(_{k}\)(x\(_{1}\)) \(\vert \vert\) F\(_{k}\)(x\(_{2}\)) \\
+	\(\Rightarrow\) F\(_{k}\)'(x) is not a secure PRF.\\
+	Adversary \(\mathcal{A}\) can make the query x\(_{1}\) = 00 \\
+	F\(_{k}\)'(x\(_{1}\)) =  F\(_{k}\)(0) \(\vert \vert\) F\(_{k}\)(0) \\
+	The left and right halves of the results correspond to each other and vice versa and produce not uniformly random results.\\
+	The adversary can therefor distinguish F\(_{k}\)'(x) from a true random function.\\
+
+\item[(d)]
+	F\(_{k}\)'(x) =  F\(_{k}\)(0\(\vert \vert\)x) \(\vert \vert\) F\(_{k}\)(1\(\vert \vert\)x) \\
+	Constructing a distinguisher \(\mathcal{D}\) for F\(_{k}\) from a distinguisher \(\mathcal{D}\)' for F\(_{k}\)'. \(\mathcal{D}\) runs \(\mathcal{D}\)'. 
+	When \(\mathcal{D}\)' asks to call its oracle on a string x, \(\mathcal{D}\) calls its oracle on the strings 0\(\vert \vert\)x and 1\(\vert \vert\)x, concatenenates
+	the answers, and gives the resulting string to \(\mathcal{D}\)' as its answer. Finally \(\mathcal{D}\) outputs what  \(\mathcal{D}\)' outputs. \\
+	It is clear that
+	\begin{itemize}
+		\item \(\mathcal{D}\) runs in poly time if \(\mathcal{D}\)' does;
+		\item if \(\mathcal{D}\)'s oracle implements F\(_{k}\), its success probablility is the same as that of  \(\mathcal{D}\)' when its oracle implements F\(_{k}\)'; and
+		\item if  \(\mathcal{D}\)'s oracle implements a random function, its success probability is the same as that of  \(\mathcal{D}\)' when its oracle does likewise.
+	\end{itemize}
+\item[(e)]
+	F\(_{k}\)'(x)  = \textit{truncate last m bits of}  F\(_{k}\)(x), m \(<\) \(\vert\)F\(_{k}\)(x)\(\vert\) \\
+	F\(_{k}\)'(x) has the form \(\{0,1\}^{n}\) \(\times\) \(\{0,1\}^{n}\) \(\Rightarrow\) \(\{0,1\}^{n-m}\), \(\vert\)x\(\vert\) = n \\
+	Assume F\(_{k}\)'(x) is not a secure PRF and an adversary \(\mathcal{A}\) can distinguish F\(_{k}\)'(x) and a random function f(x) \(\in\) \(\{0,1\}^{n-m}\). \\
+	We construct \(\mathcal{B}\), an adversary for F\(_{k}\)(x) that runs \(\mathcal{A}\) as a subrutine.\\
+	\(\mathcal{B}\) queries \(\mathcal{A}\) with x and outputs x truncated by the last m bits. \\
+	\(\mathcal{B}\) is an efficient adversary to F\(_{k}\)(x) but shortened by m bits.\\
+	Since the results of F\(_{k}\)(x) are uniformly distributed, a shortened result of F\(_{k}\)(x) is uniformly distributed as well. \\
+	Therfore \(\mathcal{B}\) can't exist. \\
+	\(\Rightarrow\) F\(_{k}\)'(x) is a secure PRF \\
+\end{itemize}
