@@ -1,15 +1,15 @@
-Let adversary $A$ can choose can choose messages $x_1$ and $x_2$. Then corresponding keyed functions adversary
+Let adversary $A$ can choose can choose messages $x_1$ and $x_2$. Then corresponding keyed functions 
 \begin{center}
     $ F_k(x_1) := G_n(k) \xor x_1 $ \\
     $ F_k(x_2) := G_n(k) \xor x_2 $ \\
 \end{center}
 
-$A$ computes $ F_k(x_1) \xor F_k(x_2) $ which will be $ x_1 \xor x_2 $ \\
+A can compute $ F_k(x_1) \xor F_k(x_2) =  x_1 \xor x_2 $ \\
 
-With this A can easily distingush from a uniformly selected function $f$ by checking 
+With this adversary can easily distingush from a uniformly selected function $f$ by checking 
 
 \begin{center}
-    $ (F_k(x_1) \xor F_k(x_2) ) \xor x_1 => x_1 \xor x_2 \xor x_1  = x_1$
+    $ (F_k(x_1) \xor F_k(x_2) ) \xor x_1 => x_1 \xor x_2 \xor x_1  = x_2$
 \end{center}
 
 or 
