@@ -4,10 +4,9 @@ not imply indistinguishability of encryptions under a chosen plaintext attack.\\
 We show this by a proof by contradiction. Let's assume that an arbitrary encryption scheme \(\Pi = (Gen, Enc, Dec)\) exists, that is EAV-Mult secure.\\
 \(\Pi' = (Gen', Enc', Dec')\) is constructed as follows:\\
 \(Gen' = Gen\)\\
-\(Enc'\) and \(Dec'\) are constructed similar to the Chained Cipher Block Chaining: \\
 \(\underline{Enc'(k, m)}:\)\\
 \(c \leftarrow Enc(k, m)\)\\
-\(if\ m = r:\), r is choosen uniformly at random, but is fixed for all encryptions\\
+\(if\ m = r:\) (r is choosen uniformly at random, but is fixed for all encryptions)\\
 \(\indent return\ r,k,c\)\\
 \(else:\)\\
 \(\indent return\ r,0,c\)\\
@@ -26,15 +25,18 @@ We show this by a proof by contradiction. Let's assume that an arbitrary encrypt
 \(return\)\\
 \\
 Proof, that \(\Pi'\) remains EAV-mult secure:\\
-Proof by contradiction: We assume there is an adversary \(\mathcal{A}\) who can break \(\Pi'\). We then construct an adversary \(\mathcal{B}\) against \(\Pi\) as follows: The adversary \(\mathcal{B}\) has access to the encryption function \(Enc'\). To use the adversary \(\mathcal{A}\) against the security of \(\Pi'\), \(\mathcal{B}\) has to provide the interface for \(\mathcal{A}\). He does this by simulating the encryption for \(\mathcal{A}\). \(\mathcal{A}\) outputs two message vector  \((m_0^1, m_0^2,..., m_0^t)\) and \((m_1^1, m_1^2,..., m_1^t)\) with \(\vert m_0^i \vert = \vert m_1^i \vert \forall i\). The adversary \(\mathcal{B}\) than samples a bit \(b \leftarrow\$ \{0,1\}\) and invokes his own encryption function \(Enc(k,m)\) to compute \(tup^i = \left\{
+Proof by contradiction: We assume there is an adversary \(\mathcal{A}\) who can break \(\Pi'\). We then construct an adversary \(\mathcal{B}\) against \(\Pi\) as follows: The adversary \(\mathcal{B}\) has access to the encryption function \(Enc\). To use the adversary \(\mathcal{A}\) against the security of \(\Pi'\), \(\mathcal{B}\) has to provide the interface for \(\mathcal{A}\). He does this by simulating the encryption for \(\mathcal{A}\) (Here an encryption oracle isn't required from \(\mathcal{A}\)).\\
+\(\mathcal{A}\) outputs two message vector  \((m_0^1, m_0^2,..., m_0^t)\) and \((m_1^1, m_1^2,..., m_1^t)\) with \(\vert m_0^i \vert = \vert m_1^i \vert \forall i\). The adversary \(\mathcal{B}\) than samples a bit \(b \leftarrow\$ \{0,1\}\) and invokes his own encryption function \(Enc(k,m)\) to compute \(tup^i = \left\{
 \begin{array}{ll}
-	(r,k, Enc(k,m_b^i)) & if\ m_b^i = r\\
-	(r, 0, Enc(k,m_b^i)) & else\\
+	(r,k, Enc(k,m_b^i)) & ,if\ m_b^i = r\\
+	(r, 0, Enc(k,m_b^i)) & ,else\\
 \end{array}
 \right.	\)\\
 Then he forwards \(\left(tup^1, tup^2, ... tup^t\right)\) to \(\mathcal{A}\). Eventually \(\mathcal{A}\) outputs a bit \(b'\). The adversary \(\mathcal{B}\) outputs the same bit \(b'\).\\
 We see, \(\mathcal{B}\) is efficient, if \(\mathcal{A}\) is. \\
-To analyse the success, \\
+To analyse the success, look at the two cases for \(tup^i\). In the first case the key will be returned and so the scheme can be broken, but the probability for this is: \(Pr[PrivK^{mult}_{\mathcal{A}, \Pi'}(\lambda) = 1] = \frac{t}{2^{\vert m^i \vert}}  \). In second case the probability \(Pr[PrivK^{mult}_{\mathcal{A}, \Pi'}(\lambda) = 1] \le \frac{1}{2} + negl(\lambda)\), because the information of the value of \(r\) doen't help to break the scheme.\\
+But \(\mathcal{A}\) can break \(Pi'\) nevertheless. So \(Pr[PrivK^{mult}_{\mathcal{A}, \Pi'} (\lambda) = 1] \ge \frac{1}{2} + negl(\lambda) \). If the addition from \(r\) and \(k\) to the encoding \(Enc(k,m)\) is not the reason for the non-negligible probability, it has to be the encoding itself.\\ 
+But we know, that \(\Pi\) is EAV-Mult so \(Enc(k,m)\) cannot have the probability \(Pr[PrivK^{mult}_{\mathcal{B}, \Pi} (\lambda) = 1] \ge \frac{1}{2} + negl(\lambda) \). So the adversary \(\mathcal{A}\) cannot exist. And therefore holds: \(\Pi'\) remains EAV-mult secure.\\
 \\
 Describe a successful adversary against the CPA security of \(\Pi'\):\\
 For the first call to the enncryption oracle, the adversary can choose the message randomly. It is very unlikly that he guesses the message so that \(m = r\). In this case, he would learn \(k\) immediatly. If the adversary doesn't guess the correct message he learns \(r\). With this information he can choose the next message correct with \(m = r\) and then learn \(k\). \\
