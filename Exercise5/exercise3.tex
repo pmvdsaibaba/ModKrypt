@@ -1,2 +1,16 @@
-
+1. To show: If \(f\) is pseudorandom, than \(\Pi_{CTR}\) is CPA-secure. \\
+Proof by contradiction. We assume there exists an adversary \(\mathcal{A}\), which can break \(\Pi_{CTR}\). Then we construct the distinguisher \(\mathcal{B}\), who can distinguish \(f\) from a truly random function and invokes \(\mathcal{A}\) as follows: \\
+\(\mathcal{B}\) has access to an oracle \(\mathcal{O}_{B}\) that runs either the pseudorandom permutation function \(f\) or a randomly choosen permutation function \(f^*\).
+\(\mathcal{B}\) has to give \(\mathcal{A}\) access to an encryption oracle \(\mathcal{O}_{Enc}\). \(\mathcal{O}_{Enc}\) is realised by answering with \(Enc_k(m)\) on the input \(m\), where \(f_k\) is replaced with the oracle \(\mathcal{O}_{B}\). Thus, \(c\) looks like \(c = (IV, m \xor s)\), where \(s = \mathcal{O}_{B}(IV) \vert\vert \mathcal{O}_{B}(IV + 1) \vert\vert ... \vert\vert \mathcal{O}_{B}\left(IV + \left\lceil \frac{\vert m \vert}{n}\right \rceil \right) \) 
+with the last bits truncated so \(\vert s \vert = \vert m \vert\).
+\(\mathcal{B}\) than samples a bit \(b \leftarrow\$ \{0,1\}\) and forwards \(c_b \leftarrow Enc(k, m_b)\) to \(\mathcal{A}\). \(\mathcal{B}\) then outputs the same bit \(b'\) which \(\mathcal{A}\) outputs. \\
+\(\mathcal{B}\) is efficient, because he only forwards messages which can be done in constant time and invokes \(\mathcal{A}\) which is efficient.\\
+To analyse the success distuiguish two cases: If \(\mathcal{O}_{B}\) runs a pseudorandom permutation function \(f\) then \(\mathcal{B}\) perfectly simulates \(\Pi_{CTR}\) to \(\mathcal{A}\). \(\Rightarrow Pr[\mathcal{B}^{f(\cdot)}(1^\lambda) = 1] = Pr[PrivK^{CPA}_{\Pi^{CTR},\mathcal{A}} = 1] = \dfrac{1}{2} + non-negl(\lambda)\), because \(\mathcal{A}\) is an efficient adversary against die CPA-security of \(\Pi_{CTR}\)\\
+If the oracle runs a randomly choosen function \(f^*\) and \(\mathcal{A}\) queries the encryption oracle at least q times we have \(Pr[\mathcal{B}^{f^*(\cdot)}(1^\lambda) = 1] = \dfrac{1}{2} + \dfrac{q(\lambda)}{2^\lambda}\).\\
+Now we subtract those two cases:\\
+\(\vert Pr[\mathcal{B}^{f(\cdot)}(1^\lambda) = 1] - Pr[\mathcal{B}^{f^*(\cdot)}(1^\lambda) = 1] \vert = \left\vert \dfrac{1}{2} + non-negl(\lambda) - \dfrac{1}{2} - \dfrac{q(\lambda)}{2^\lambda} \right\vert = non-negl(\lambda) - \dfrac{q(\lambda)}{2^\lambda} = non-negl(\lambda) \). So the distiguisher \(\mathcal{B}\) can distinguish between \(f\) and \(f^*\) with a non-negligible gab which is a contradiction to the pseudorandomness of \(f\). Therefore such an adversary \(\mathcal{A}\) against the CPA-security of \(\Pi_{CTR4}\) cannot exist.\\
+\\
+2. To show: \(\Pi_{CTR}\) is not CCA-secure.\\
+In the game for CCA-security the adversary \(\mathcal{A}\) has access to an encryption oracle \(\mathcal{O}_{Enc}\) and a decryption oracle \(\mathcal{O}_{Dec}\). \\
+\(\mathcal{A}\) gives the challenger two messages \(m_0\) and \(m_1\) with \(\vert m_0 \vert = \vert m_1 \vert\) and gets the ciphertext \(c_b = (IV, c_b')\) back. Then \(\mathcal{A}\) askes the decryption oracle \(\mathcal{O}_{Dec}\) for the decoding of \(c_b = (IV, c_b')\). If the result is \(m_0\) he returns \(b' = 0\), if the result is \(m_1\) \(b' = 1\). Since \(Dec_k(Enc_k(m) )= Dec_k((IV, m \xor s)) = m \xor s \xor s = m\) one of this cases has to hold. 
 
