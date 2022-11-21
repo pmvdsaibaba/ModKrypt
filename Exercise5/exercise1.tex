@@ -1,2 +1,13 @@
+Given $ \{F_k\}_{k \in K} $ is a family of bit permutations.\\
 
+Adversary $A$ can choose two inputs $x_1$ and $x_2$. Then the corresponding bit permutation with key $k$ be
+$F_{k}(x_1)$ and $F_{k}(x_2)$.
+
+Let's take an example, $F_k$ as the function that swaps the first two bits of its input.
+For this function, the distinguisher can easily distinguish between $F_{k}(x_1)$ and $F_{k}(x_2)$
+with a function, $f$ that also swaps first two bits of the output. Or this can also be easily 
+distinguished just comparing the bits other than first two bits.
+
+Similarly, for any such bit permutation function there exists a function $f$ which can easily distuingush the between the inputs
+of a bit permutation $F_k$. Hence these family of bit permutations cannot be a pseudorandom permutation.
 
