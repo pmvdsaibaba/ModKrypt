@@ -12,5 +12,6 @@ Now we subtract those two cases:\\
 \\
 2. To show: \(\Pi_{CTR}\) is not CCA-secure.\\
 In the game for CCA-security the adversary \(\mathcal{A}\) has access to an encryption oracle \(\mathcal{O}_{Enc}\) and a decryption oracle \(\mathcal{O}_{Dec}\). \\
-\(\mathcal{A}\) gives the challenger two messages \(m_0\) and \(m_1\) with \(\vert m_0 \vert = \vert m_1 \vert\) and gets the ciphertext \(c_b = (IV, c_b')\) back. Then \(\mathcal{A}\) askes the decryption oracle \(\mathcal{O}_{Dec}\) for the decoding of \(c_b = (IV, c_b')\). If the result is \(m_0\) he returns \(b' = 0\), if the result is \(m_1\) \(b' = 1\). Since \(Dec_k(Enc_k(m) )= Dec_k((IV, m \xor s)) = m \xor s \xor s = m\) one of this cases has to hold. 
+\(\mathcal{A}\) gives the challenger the two messages \(m_0 = 0^\lambda\) and \(m_1 = 1^\lambda\) and gets the ciphertext \(c_b = (IV, c_b')\) back. Then \(\mathcal{A}\) askes the decryption oracle \(\mathcal{O}_{Dec}\) for the decoding of \(c_b^* = (IV, c_b'^*)\), where \(c_b'^*\) is \(c_b'\) with the last bit flipped. Since \(c_b^*\) is not equals to \(c_b\), \(\mathcal{O}_{Dec}\) will answer the query. The result is than either \(0^{\lambda -1}1\) or \(1^{\lambda-1}0\), because the only difference to computation of \(c_b' \xor s = m\) is the last bit of \(c_b'\).
+If the result is \(0^{\lambda -1}1\) the adversary returns \(b' = 0\), if the result is \(1^{\lambda-1}0\) \(b' = 1\). 
 
