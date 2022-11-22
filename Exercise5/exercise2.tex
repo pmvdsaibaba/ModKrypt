@@ -5,12 +5,12 @@ Since f is a pseudorandom permutation, f is deterministic and has a reverse oper
 \\
 If m\(_{0}\)  is encrypted: \\
 \>Enc(m\(_{0}\)) = Enc(m\(_{0}^{0}\) \(\vert \vert\) m\(_{0}^{1}\)) = Enc(001 001) = f(m\(_{0}^{0}\)) \(\vert \vert\) f(m\(_{0}^{1}\)) =
-f(001) \(\vert \vert\) f(001) = c\(_{0}\) \(\vert \vert\) c\(_{1}\) \\
+f(001) \(\vert \vert\) f(001) = c\(^{0}\) \(\vert \vert\) c\(^{1}\) \\
 \>\(\Rightarrow\) c\(^{0}\) = c\(^{1}\) \\
 \\
 If m\(_{1}\)  is encrypted: \\
 \>Enc(m\(_{1}\)) = Enc(m\(_{1}^{0}\) \(\vert \vert\) m\(_{1}^{1}\)) = Enc(110 011) = f(m\(_{1}^{0}\)) \(\vert \vert\) f(m\(_{1}^{1}\)) =
-f(110) \(\vert \vert\) f(011) = c\(_{0}\) \(\vert \vert\) c\(_{1}\) \\
+f(110) \(\vert \vert\) f(011) = c\(^{0}\) \(\vert \vert\) c\(^{1}\) \\
 \>\(\Rightarrow\) c\(^{0}\) \(\neq\) c\(^{1}\) \\
 \\
 If b = 0: c\(_{b}\) = c\(^{0}\) \(\vert \vert\) c\(^{1}\), c\(^{0}\) = c\(^{1}\) \\
