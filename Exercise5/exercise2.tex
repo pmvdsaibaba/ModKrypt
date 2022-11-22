@@ -1,2 +1,20 @@
-  
+Assume n = 3 \\
+The Adversary  \(\mathcal{A}\) can choose the two messages m\(_{0}\)  = 001 001 and  m\(_{1}\)  = 110 011 \\
+The challenger encrypted one of the messages. \\
+Since f is a pseudorandom permutation, f is deterministic and has a reverse operation. \\
+\\
+If m\(_{0}\)  is encrypted: \\
+\>Enc(m\(_{0}\)) = Enc(m\(_{0}^{0}\) \(\vert \vert\) m\(_{0}^{1}\)) = Enc(001 001) = f(m\(_{0}^{0}\)) \(\vert \vert\) f(m\(_{0}^{1}\)) =
+f(001) \(\vert \vert\) f(001) = c\(_{0}\) \(\vert \vert\) c\(_{1}\) \\
+\>\(\Rightarrow\) c\(^{0}\) = c\(^{1}\) \\
+\\
+If m\(_{1}\)  is encrypted: \\
+\>Enc(m\(_{1}\)) = Enc(m\(_{1}^{0}\) \(\vert \vert\) m\(_{1}^{1}\)) = Enc(110 011) = f(m\(_{1}^{0}\)) \(\vert \vert\) f(m\(_{1}^{1}\)) =
+f(110) \(\vert \vert\) f(011) = c\(_{0}\) \(\vert \vert\) c\(_{1}\) \\
+\>\(\Rightarrow\) c\(^{0}\) \(\neq\) c\(^{1}\) \\
+\\
+If b = 0: c\(_{b}\) = c\(^{0}\) \(\vert \vert\) c\(^{1}\), c\(^{0}\) = c\(^{1}\) \\
+If b = 1: c\(_{b}\) = c\(^{0}\) \(\vert \vert\) c\(^{1}\), c\(^{0}\) \(\neq\) c\(^{1}\) \\
+This shows that even when the adversary can't break the encryption of the pseudorandom permutation the adversary can distinguish what message was encrypted with a probability of 100\(\%\) \\
+\(\Rightarrow\) ECB mode is not EAU-secure \\
   
