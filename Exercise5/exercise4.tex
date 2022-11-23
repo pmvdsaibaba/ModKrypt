@@ -1,3 +1,9 @@
-
-
-
+The scheme is CCA1-secure.\\
+An adversary can use an encryption and decryption oracle before receiving the challenge ciphertext c.\\
+The encryption and decryption oracle allows the adversary to relate a ciphertext $c := (c_{1}, c_{2}) = (r, F_{k}(r) \oplus m)$ to a message $m := F_{k}(c_{1}) \oplus c_{2} = F_{k}(r)\oplus (F_{k}(r) \oplus m)$\\
+After using the oracles, the adversary receives the challenge ciphertext $c = (r_{c}, F_{k}(r_{c})\oplus m_{c})$.
+The only possibility for the adversary to efficiently know from which of two messages the challenge ciphertext originates from, is when $r_{c}$ was used by the encryption oracle to answer at least one of the adversary's queries or when the adversary coincidentally used $r_{c}$ as input to the decryption oracle.\\
+In these cases, the adversary may easily determine which of its messages was encrypted.\\
+Whenever the encryption oracle returns a ciphertext $c := (r,s)$ in a response to encrypt the message m, the adversary learns the value of $F_{k}(r)$ since $F_{k}(r) = s\oplus m$.
+But the adversary can query at most a polynomial number of messages and each query has the probability of $\frac{1}{2^{n}}$ that the selected value for $r = r_{c}$ what is negligible.\\
+The scheme is therefore CCA1-secure.
