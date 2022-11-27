@@ -1,2 +1,42 @@
+(a)\\
+\begin{figure}[h]
+    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{6-1 Fig1.jpg}
+    \caption{Decryption for CBC* mode}
+    \centering
+\end{figure}\\
+(b) As shown in the above figure, let us assume 
 
+\begin{center}
+    $d_i$ = Dec ($c_i$)
+\end{center}
 
+So 
+
+\begin{center}
+    $m_1 = d_1 \xor IV $\\
+    $m_2 = d_2 \xor d_1 $ ...
+\end{center}
+
+To show that this CBC* doesn't have indistinguishable encryptions, 
+let us consider message in the format $m = m_1|| m_2||m_3|| ... ||m_n$.
+Also we know for CPA, adversary $A$ is allowed of multiple encryptions.\\
+
+Let us consider $A$ choose two messages i.e., $m1$ and $m2$ 
+
+\begin{center}
+    $m1 = m1_1|| m1_2||m1_3|| ... ||m1_n$\\
+    $m1 = m2_1|| m2_2||m2_3|| ... ||m2_n$
+\end{center}
+
+And $m1$ is choosen in such a way that $m1_1 ==  m1_2 == m1_3 == ... == m1_n$ and
+$m2$ is choosen in such a way that $m2_1 \neq  m2_2 \neq m2_3 \neq ... \neq m2_n$\\
+
+With these kind of messages choosen, $A$ can distingush $m1$ and $m2$ by checking
+\begin{center}
+    $c_1 == c_3 == ... == c_i$\\
+    $c_2 == c_4 == ...  == c_{i+1}$\\
+    where $i$ is an odd number $ \leq n$
+\end{center}
+
+If the above check is statisfied then the cipher $c$ corresponds to $m1$. Else it corresponds to $m2$.
+with this $A$ can distingush between the messages.
