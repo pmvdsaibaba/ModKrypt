@@ -1,2 +1,26 @@
-
-
+\pagebreak
+a)\\
+Let $F$ be a pseudorandom permutation. Then $F$ and $F^{-1}$ are pseudorandom permutations.\\
+\\
+$\mathrm{\Pi_{M} = (Gen, Mac, Vrfy)}$\\
+\vskip 0.05in
+\begin{tabular}{l@{\hskip 1in}l@{\hskip 0.5in}l}
+$\underline{\mathrm{Gen(1^{\lambda })}}$ & $\underline{\mathrm{Mac_{k}(c)}}$ & $\underline{\mathrm{Vrfy_{k}(c,t)}}$ \\
+$k \leftarrow \mathrm{Gen(1^{\lambda})}$ & $t \leftarrow \mathrm{F}_{k}^{-1}(c)$ & if $t = \mathrm{Mac}_{k}(m)$\\
+\bf{return} $k$ & \bf{return} $t$ & \indent\bf{return} $1$\\
+ & & \bf{return} $0$\\
+\end{tabular}\\
+\vskip 1cm
+\noindent$\mathrm{\Pi_{E} = (Gen, Enc, Dec)}$\\
+\vskip 0.05in
+\begin{tabular}{l@{\hskip 1in}l@{\hskip 0.5in}l}
+$\underline{\mathrm{Gen(1^{\lambda })}}$ & $\underline{\mathrm{Enc_{k}(m)}}$ & $\underline{\mathrm{Dec_{k}(c)}}$ \\
+$k \leftarrow \mathrm{Gen(1^{\lambda})}$ & $r \leftarrow \{0,1\}^{\frac{n}{2}}$ & $v := \mathrm{F}_{k}^{-1}(c)$\\
+\bf{return} $k$ & $m \in  \{0,1\}^{\frac{n}{2}}$ & \bf{return} $\mathrm{first}$ $\frac{n}{2}$ $\mathrm{bits}$ $\mathrm{of}$  $v$  \\
+ & $c \leftarrow \mathrm{F}_{k}(m \parallel r)$ &  \\
+ & \bf{return} $c$ & \\
+\end{tabular}
+\vskip 1cm
+\noindent $\mathrm{Because}$ $\mathrm{Enc}_{k}(m), \mathrm{Mac}_{k}(\mathrm{Enc}_{k}(m)) = \mathrm{F}_{k}(m\parallel r), \mathrm{F}_{k}^{-1}(\mathrm{F}_{k}(m\parallel r)) = \mathrm{F}_{k}(m\parallel r), (m\parallel r)$\\
+\vskip 1cm
+\noindent TODO Beweise 
