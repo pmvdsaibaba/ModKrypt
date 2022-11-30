@@ -23,4 +23,22 @@ $k \leftarrow \mathrm{Gen(1^{\lambda})}$ & $r \leftarrow \{0,1\}^{\frac{n}{2}}$ 
 \vskip 1cm
 \noindent $\mathrm{Because}$ $\mathrm{Enc}_{k}(m), \mathrm{Mac}_{k}(\mathrm{Enc}_{k}(m)) = \mathrm{F}_{k}(m\parallel r), \mathrm{F}_{k}^{-1}(\mathrm{F}_{k}(m\parallel r)) = \mathrm{F}_{k}(m\parallel r), (m\parallel r)$\\
 \vskip 1cm
-\noindent TODO Beweise 
+\noindent TODO Beweise\\
+\textbf{Proof that $\mathrm{\Pi_{M}}$ is secure}\\
+We reduce the security of the Mac to the pseudorandomness of the function $F^{-1}$.\\
+Therefore, we first assume that the construction is not secure and therefore there exists an adversary A that wins MacForge with non-negligible probability $\varepsilon(\lambda )$. We use this adversary A to build a distinguisher for the pseudorandomness of $F_{k}$.\\
+With the help of the oracle $O_{D}$ of the pseudorandomness, D answers the oracle requests of A by computing $t := O_{D}(m)$. If the oracle answers with a pseudorandom function, the view of A is identical to $MacForge_{A,\Pi'}(\lambda)$. Thus we have \\
+$Pr\left [ D^{F_{k}^{-1}(\cdot )}(1^{\lambda }) = 1 \right ] = Pr\left [ MacForge_{A,\Pi}(\lambda ) = 1 \right ] = \varepsilon $\\
+where $k \leftarrow  \{0,1\}^{\lambda }$.\\
+If the oracle answers with a random function, then we simulate the game for a different MAC-scheme $\Pi'$.
+Let $\Pi' = (Gen', Mac', Vrfy')$ be a message authentication code which is the same as $\Pi$, except it uses a truly random function $f$ instead of the pseudorandom function $F_{k}$. 
+It is easy to see that \\
+$Pr\left [ MacForge_{A,\Pi'}(\lambda ) = 1 \right ] \leq 2^{-\lambda } $\\
+This is the case because for any message m, the value t is uniformly distributed in $\{0,1\}_{*}$ from the point of view of A. The view of A is identical to $MacForge_{A,\Pi}(\lambda )$. We have \\
+$Pr\left [ D^{f(\cdot )}(1^{\lambda }) = 1 \right ] = Pr\left [ MacForge_{A,\Pi'}(\lambda ) = 1 \right ]  \leq \frac{1}{2^{\lambda }} $ \\
+where $f \leftarrow Func_{\lambda }$.\\
+The distinguisher can now distinguish between pseudorandom and truly random with non-negligible probability.
+As we assumed the function $F^{-1}$ to be pseudorandom, this is a contradiction and thus such an adversary cannot exist. Hence the MAC construction is secure.
+
+
+
