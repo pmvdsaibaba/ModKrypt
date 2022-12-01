@@ -23,8 +23,7 @@ $k \leftarrow \mathrm{Gen(1^{\lambda})}$ & $r \leftarrow \{0,1\}^{\frac{n}{2}}$ 
 \vskip 1cm
 \noindent $\mathrm{Because}$ $\mathrm{Enc}_{k}(m), \mathrm{Mac}_{k}(\mathrm{Enc}_{k}(m)) = \mathrm{F}_{k}(m\parallel r), \mathrm{F}_{k}^{-1}(\mathrm{F}_{k}(m\parallel r)) = \mathrm{F}_{k}(m\parallel r), (m\parallel r)$\\
 \vskip 1cm
-\noindent TODO Beweise\\
-\textbf{Proof that $\mathrm{\Pi_{M}}$ is secure}\\
+\noindent \textbf{Proof that $\mathrm{\Pi_{M}}$ is secure}\\
 We reduce the security of the Mac to the pseudorandomness of the function $F^{-1}$.\\
 Therefore, we first assume that the construction is not secure and therefore there exists an adversary A that wins MacForge with non-negligible probability $\varepsilon(\lambda )$. We use this adversary A to build a distinguisher for the pseudorandomness of $F_{k}$.\\
 With the help of the oracle $O_{D}$ of the pseudorandomness, D answers the oracle requests of A by computing $t := O_{D}(m)$. If the oracle answers with a pseudorandom function, the view of A is identical to $MacForge_{A,\Pi'}(\lambda)$. Thus we have \\
