@@ -1,4 +1,4 @@
-\pagebreak
+
 a)\\
 Let $F$ be a pseudorandom permutation. Then $F$ and $F^{-1}$ are pseudorandom permutations.\\
 \\
@@ -22,45 +22,69 @@ $k \leftarrow \mathrm{Gen(1^{\lambda})}$ & $r \leftarrow \{0,1\}^{n}$ & $v := \m
 \end{tabular}
 \vskip 1cm
 \noindent\textbf{Proof that $\mathrm{\Pi_{M}}$ is unforgeable}\\
+
 We reduce the security of the Mac to the pseudorandomness of the function $F^{-1}$.\\
+
 Therefore, we first assume that the construction is not secure and therefore there exists an adversary $\mathcal{A}$ that wins MacForge with non-negligible probability $\varepsilon(\lambda )$. We use this adversary $\mathcal{A}$ to build a distinguisher for the pseudorandomness of $F_{k}$.\\
+
 With the help of the oracle $O_{\mathcal{D}}$ of the pseudorandomness, $\mathcal{D}$ answers the oracle requests of $\mathcal{A}$ by computing $t := O_{D}(m)$. If the oracle answers with a pseudorandom function, the view of $\mathcal{A}$ is identical to $MacForge_{\mathcal{A},\Pi'}(\lambda)$. Thus we have \\
+
 $Pr\left [ D^{F_{k}^{-1}(\cdot )}(1^{\lambda }) = 1 \right ] = Pr\left [ MacForge_{\mathcal{A},\Pi}(\lambda ) = 1 \right ] = \varepsilon $\\
+
 where $k \leftarrow  \{0,1\}^{\lambda }$.\\
+
 If the oracle answers with a random function, then we simulate the game for a different MAC-scheme $\Pi'$.
 Let $\Pi' = (Gen', Mac', Vrfy')$ be a message authentication code which is the same as $\Pi$, except it uses a truly random function $f$ instead of the pseudorandom function $F_{k}$. 
 It is easy to see that \\
+
 $Pr\left [ MacForge_{A,\Pi'}(\lambda ) = 1 \right ] \leq 2^{-\lambda } $\\
+
 This is the case because for any message m, the value t is uniformly distributed in $\{0,1\}_{*}$ from the point of view of $\mathcal{A}$. The view of $\mathcal{A}$ is identical to $MacForge_{\mathcal{A},\Pi}(\lambda )$. We have \\
 $Pr\left [ D^{f(\cdot )}(1^{\lambda }) = 1 \right ] = Pr\left [ MacForge_{\mathcal{A},\Pi'}(\lambda ) = 1 \right ]  \leq \frac{1}{2^{\lambda }} $ \\
 where $f \leftarrow Func_{\lambda }$.\\
+
 The distinguisher can now distinguish between pseudorandom and truly random with non-negligible probability.
 As we assumed the function $F^{-1}$ to be pseudorandom, this is a contradiction and thus such an adversary cannot exist. Hence the MAC construction is secure.
 \vskip 1cm
-\pagebreak
+
+
 \noindent\textbf{Proof that $\mathrm{\Pi_{E}}$ is CPA-secure}\\
 We assume towards contradiction that the scheme $\mathrm{\Pi_{E}}$ is not CPA-secure.\\
+
 If $\mathrm{\Pi_{E}}$ is not CPA-secure then there exists an adversary $\mathcal{A}$ that succeeds in the CPA-game $\frac{1}{2}$ with probability $\frac{1}{2} + \varepsilon(\lambda )$ where $\varepsilon$ is a non-negligible function.\\
+
 We now use the ability of the adversary $\mathcal{A}$ to create a distinguisher $\mathcal{D}$ that can distinguish between the underlying pseudorandom function F and a randomly chosen function f.\\
+
 The distinguisher $\mathcal{D}$ gets as input $\lambda $ and access to $O_{\mathcal{D}}$ that runs either F or f.\\
+
 $\mathcal{D}$ simulates an encryption oracle $O_{Enc}$ to $\mathcal{A}$. It answers with Enc(k,m) on the input m where the function F is replaced with the oracle $O_{\mathcal{D}}$.\\
+
 The encryption oracle either answers with $c := \mathrm{F}_{k}(m \parallel r)$ or  $c := f(m \parallel r)$.\\
+
 \(\mathcal{A}\) then asks for the encryption of one of the two messages \(m_0\) and \(m_1\) with \(\vert m_0 \vert = \vert m_1 \vert \). 
 \(\mathcal{D}\) then samples a bit \(b \leftarrow\$ \{0,1\}\) and forwards \(c_b \leftarrow Enc_k(m_b)\) to \(\mathcal{A}\) where \(Enc_k(m_b)\) is realised like in the encryption oracle. 
 \(\mathcal{D}\) then outputs $b' = b$ \\
-\(\mathcal{D}\) is efficient because it only forwards messages what can be done in constant time and invokes \(\mathcal{A}\) which is efficient.\\
+
+\(\mathcal{D}\) is efficient because it only forwards messages what can be done in constant time and invokes \(\mathcal{A}\) which is efficient.
 To analyse the success we distinguish two cases:\\
+
 If \(\mathcal{O}_{D}\) runs a pseudorandom permutation function \(f\) then \(\mathcal{D}\) perfectly simulates \(\Pi_{E}\) to \(\mathcal{A}\). \\
+
 \(\Rightarrow Pr[\mathcal{D}^{f(\cdot)}(1^\lambda) = 1] = Pr[PrivK^{CPA}_{\Pi^{E},\mathcal{A}} = 1] = \dfrac{1}{2} + non-negl(\lambda)\), because \(\mathcal{A}\) is an efficient adversary against the CPA-security of \(\Pi_{E}\)\\
+
 If the oracle runs a randomly chosen function \(f^*\) and \(\mathcal{A}\) queries the encryption oracle at least q times we have \(Pr[\mathcal{D}^{f^*(\cdot)}(1^\lambda) = 1] = \dfrac{1}{2} + \dfrac{q(\lambda)}{2^\lambda}\).\\
 Now we subtract those two cases:\\
+
 \(\vert Pr[\mathcal{D}^{f(\cdot)}(1^\lambda) = 1] - Pr[\mathcal{D}^{f^*(\cdot)}(1^\lambda) = 1] \vert = \left\vert \dfrac{1}{2} + non-negl(\lambda) - \dfrac{1}{2} - \dfrac{q(\lambda)}{2^\lambda} \right\vert = non-negl(\lambda) - \dfrac{q(\lambda)}{2^\lambda} = non-negl(\lambda) \).\\
  So the distinguisher \(\mathcal{D}\) can distinguish between \(f\) and \(f^*\) with a non-negligible gap which is a contradiction to the pseudorandomness of \(f\).\\
+
  Therefore such an adversary \(\mathcal{A}\) against the CPA-security of \(\Pi_{E}\) cannot exist.\\
 \vskip 1cm
 \noindent b)\\
 \noindent\textbf{Proof that $\mathrm{\Pi'}$ is not CCA-secure}\\
+
 $\mathrm{Because}$ $\mathrm{Enc}_{k}(m), \mathrm{Mac}_{k}(\mathrm{Enc}_{k}(m)) = \mathrm{F}_{k}(m\parallel r), \mathrm{F}_{k}^{-1}(\mathrm{F}_{k}(m\parallel r)) = \mathrm{F}_{k}(m\parallel r), (m\parallel r)$\\
+
 When the adversary $\mathcal{A}$ receives its challenge ciphertext $c = (c', t)$, it can easily recover the message and knows which of its two messages was encrypted.
 
 

@@ -1,6 +1,10 @@
-\textbf{Task:} Show that \(\Pi_{CBC}\) is not CCA-secure by demonstrating a successful adversary.  \\
+\textbf{Task:} Show that \(\Pi_{CBC}\) is not CCA-secure by demonstrating a successful adversary. \\
+
 The adversary  \(\mathcal{A}\) can choose the two messages \(m_{0}  = m_0^1 \vert \vert m_0^2 = 0^n\ 0^n\) and  \(m_{1}  = m_1^1 \vert \vert m_1^2 = 1^n\ 1^n\) which he sends to the challenger. Then he gets the ciphertext \(c_b = (c_b^0 \vert \vert c_b^1 \vert \vert c_b^2) = (IV \vert \vert f_k(IV \xor m_b^1) \vert \vert  f_k( f_k(IV \xor m_b^1) \xor m_b^2))\) back.\\
-Then \(\mathcal{A}\) flipps the last bit from \(c_b^2\), so \((c_b^2)' = c_b^2 \xor 0^{n-1}1\) and asks the decryption oracle for the decryption of \(c_b' = c_b^0 \vert \vert c_b^1 \vert \vert (c_b^2)'\). Because \(c_b' \neq c_b\) the decryption oracle answers with \(m' = f_k^{-1}(c_b^1) \xor c_b^0 \vert \vert f_k^{-1}(c_b^2) \xor c_b^1  = f_k^{-1}(f_k(IV \xor m_b^1)) \xor IV \vert \vert f_k^{-1}((c_b^2)') \xor f_k(IV \xor m_b^1) = m_b^1 \vert \vert f_k^{-1}((c_b^2)') \xor f_k(IV \xor m_b^1)\) \\ 
+
+Then \(\mathcal{A}\) flips the last bit from \(c_b^2\), so \((c_b^2)' = c_b^2 \xor 0^{n-1}1\) and asks the decryption oracle for the decryption of \(c_b' = c_b^0 \vert \vert c_b^1 \vert \vert (c_b^2)'\). Because \(c_b' \neq c_b\) the decryption oracle answers with \(m' = f_k^{-1}(c_b^1) \xor c_b^0 \vert \vert f_k^{-1}(c_b^2) \xor c_b^1  = f_k^{-1}(f_k(IV \xor m_b^1)) \xor IV \vert \vert f_k^{-1}((c_b^2)') \xor f_k(IV \xor m_b^1) = m_b^1 \vert \vert f_k^{-1}((c_b^2)') \xor f_k(IV \xor m_b^1)\) \\
+
 \(m_b^1\) is now either \(m_0^1\) or \(m_1^1\) because the change in \((c_b^2)'\) doesn't impact \(m_b^1\). So the adversary can say for sure, if the recieved civertext \(c_b\) is the encoding for \(m_0\) or \(m_1\). \\
+
 \(\Rightarrow\) \(\Pi_{CBC}\) mode is not CCA-secure \\
   
