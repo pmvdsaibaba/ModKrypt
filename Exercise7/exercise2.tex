@@ -1,2 +1,19 @@
-  
+\begin{itemize}
+	\item[a] not secure:\\
+	The adversary $\mathcal{A}$ makes two queries to the oracle:\\
+	\(m^1 = m_1 \vert \vert m_2 \Rightarrow t^1 = t^1_1 \vert \vert t^1_2 = F(K, m_1) \vert \vert F(K, F(K, m_2))\)\\
+	\(m^2 = F(K, m_1) \vert \vert m_2 \Rightarrow t^2 = t^2_1 \vert \vert t^2_2= F(K, F(K, m_1)) \vert \vert F(K, F(K, m_2))\)\\
+	Then he knows the tag for the message \(m^* = m_1 \vert \vert m_1\) which is \(t^* = F(K, m1) \vert \vert F(K, F(K, m1)) = t^1_1 \vert \vert t^2_1\). Because \(m^* \neq m^1\) and \(m^* \neq m^2\), \((m^*, t^*)\) is a valid attack.
+	
+	\item[b] not secure:\\
+	The adversary $\mathcal{A}$ makes one query to the oracle:\\
+	\(m^1 = m_1 \vert \vert m_2 \Rightarrow t^1 = F(K, m_1) \xor F(K, m_2) \)\\
+	Then he knows the tag for the message \(m^* = m_2 \vert \vert m_1\) which is \(t^* = F(K, m_2) \xor F(K, m_1) = F(K, m_1) \xor F(K, m_2) = t^1\) . Because \(m^* \neq m^1\), \((m^*, t^*)\) is a valid attack.
+	
+	\item[c] not secure:\\
+	The adversary $\mathcal{A}$ makes one query to the oracle:\\
+	\(m^1 = m_1 \vert \vert m_2 \Rightarrow t^1 = (r \xor (F(K, m_1) \xor F(K, m_2)), r) \)\\
+	Then he knows the tag for the message \(m^* = m_2 \vert \vert m_1\) which is \(t^* = (r \xor (F(K, m_2) \xor F(K, m_1)), r) = (r \xor (F(K, m_1) \xor F(K, m_2)), r) = t^1\) . Because \(m^* \neq m^1\), \((m^*, t^*)\) is a valid attack.
+	
+\end{itemize}  
   
