@@ -1244,10 +1244,6 @@ INPUT ./7-3 IMG.jpg
 INPUT 7-3 IMG.jpg
 INPUT ./7-3 IMG.jpg
 INPUT ./7-3 IMG.jpg
-INPUT ./exercise4.tex
-INPUT exercise4.tex
-INPUT ./exercise4.tex
-INPUT exercise4.tex
 INPUT ./setup/logo.png
 INPUT ./setup/logo.png
 INPUT setup/logo.png
@@ -1255,6 +1251,10 @@ INPUT ./setup/logo.png
 INPUT ./setup/FAU_logo.pdf
 INPUT setup/FAU_logo.pdf
 INPUT ./setup/FAU_logo.pdf
+INPUT ./exercise4.tex
+INPUT exercise4.tex
+INPUT ./exercise4.tex
+INPUT exercise4.tex
 INPUT ./setup/logo.png
 INPUT ./setup/logo.png
 INPUT setup/logo.png

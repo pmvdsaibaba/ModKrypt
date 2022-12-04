@@ -1,8 +1,8 @@
 # Fdb version 4
-["pdflatex"] 1670175365 "c:/Users/User/Desktop/Modkrypt/Git/Exercise7/Sheet7.tex" "Sheet7.pdf" "Sheet7" 1670175370 0
+["pdflatex"] 1670176106 "c:/Users/User/Desktop/Modkrypt/Git/Exercise7/Sheet7.tex" "Sheet7.pdf" "Sheet7" 1670176111 0
   "7-3 IMG.jpg" 1670173605 29633 767384ccdbd71b59d1769c67a6c0953e ""
-  "Sheet7.aux" 1670175369 1037 32fad86a7e48be12ad49a52e95173943 "pdflatex"
-  "Sheet7.out" 1670175369 140 e41e9ec76e06a704c6361735357ef817 "pdflatex"
+  "Sheet7.aux" 1670176111 1037 32fad86a7e48be12ad49a52e95173943 "pdflatex"
+  "Sheet7.out" 1670176111 140 e41e9ec76e06a704c6361735357ef817 "pdflatex"
   "Sheet7.tex" 1670173905 759 5cd16ccf4908d82072b4e1c11804fd46 ""
   "c:/Users/User/Desktop/Modkrypt/Git/Exercise7/Sheet7.tex" 1670173905 759 5cd16ccf4908d82072b4e1c11804fd46 ""
   "c:/tools/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1669157314 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -203,7 +203,7 @@
   "c:/tools/texlive/2022/texmf.cnf" 1669163180 713 e69b156964470283e0530f5060668171 ""
   "exercise1.tex" 1670172897 451 1d564ed1c9c05bc83b9529c4c6d28550 ""
   "exercise2.tex" 1670171483 1403 4d694026f77f2eec0f9e9cf4fe8beac8 ""
-  "exercise3.tex" 1670175364 1016 28995950789eadf8d83b95df5f44a7b3 ""
+  "exercise3.tex" 1670176105 1425 b4b39f98d27935959e696ad7ffc3614b ""
   "exercise4.tex" 1669156116 6 2228e977ebea8966e27929f43e39cb67 ""
   "setup/FAU_logo.pdf" 1669156116 253402 65175a5bbb78221acc372792beb8daf6 ""
   "setup/logo.png" 1669156116 81100 9d859029370866678fcda88548669834 ""
