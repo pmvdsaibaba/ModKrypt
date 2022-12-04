@@ -1219,14 +1219,6 @@ INPUT ./exercise2.tex
 INPUT exercise2.tex
 INPUT ./exercise2.tex
 INPUT exercise2.tex
-INPUT ./exercise3.tex
-INPUT exercise3.tex
-INPUT ./exercise3.tex
-INPUT exercise3.tex
-INPUT ./exercise4.tex
-INPUT exercise4.tex
-INPUT ./exercise4.tex
-INPUT exercise4.tex
 INPUT c:/tools/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmssi12.tfm
 INPUT c:/tools/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmssi12.tfm
 INPUT c:/tools/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmssi10.tfm
@@ -1243,11 +1235,39 @@ INPUT ./setup/FAU_logo.pdf
 INPUT ./setup/FAU_logo.pdf
 INPUT c:/tools/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmssi8.tfm
 INPUT c:/tools/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+INPUT ./exercise3.tex
+INPUT exercise3.tex
+INPUT ./exercise3.tex
+INPUT exercise3.tex
+INPUT ./7-3 IMG.jpg
+INPUT ./7-3 IMG.jpg
+INPUT 7-3 IMG.jpg
+INPUT ./7-3 IMG.jpg
+INPUT ./7-3 IMG.jpg
+INPUT ./exercise4.tex
+INPUT exercise4.tex
+INPUT ./exercise4.tex
+INPUT exercise4.tex
+INPUT ./setup/logo.png
+INPUT ./setup/logo.png
+INPUT setup/logo.png
+INPUT ./setup/logo.png
+INPUT ./setup/FAU_logo.pdf
+INPUT setup/FAU_logo.pdf
+INPUT ./setup/FAU_logo.pdf
+INPUT ./setup/logo.png
+INPUT ./setup/logo.png
+INPUT setup/logo.png
+INPUT ./setup/logo.png
+INPUT ./setup/FAU_logo.pdf
+INPUT setup/FAU_logo.pdf
+INPUT ./setup/FAU_logo.pdf
 INPUT Sheet7.aux
 INPUT ./Sheet7.out
 INPUT ./Sheet7.out
 INPUT c:/tools/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
 INPUT c:/tools/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
+INPUT c:/tools/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
 INPUT c:/tools/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
 INPUT c:/tools/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 INPUT c:/tools/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb

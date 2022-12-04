@@ -1,9 +1,10 @@
 # Fdb version 4
-["pdflatex"] 1670172898 "c:/Users/User/Desktop/Modkrypt/Git/Exercise7/Sheet7.tex" "Sheet7.pdf" "Sheet7" 1670172902 0
-  "Sheet7.aux" 1670172901 1037 ab8378bd9b2688363b732c6a3d69f1a8 "pdflatex"
-  "Sheet7.out" 1670172901 140 e41e9ec76e06a704c6361735357ef817 "pdflatex"
-  "Sheet7.tex" 1669156116 748 ee19e77f085a6855743fbda9daf050d2 ""
-  "c:/Users/User/Desktop/Modkrypt/Git/Exercise7/Sheet7.tex" 1669156116 748 ee19e77f085a6855743fbda9daf050d2 ""
+["pdflatex"] 1670175206 "c:/Users/User/Desktop/Modkrypt/Git/Exercise7/Sheet7.tex" "Sheet7.pdf" "Sheet7" 1670175210 0
+  "7-3 IMG.jpg" 1670173605 29633 767384ccdbd71b59d1769c67a6c0953e ""
+  "Sheet7.aux" 1670175210 1037 32fad86a7e48be12ad49a52e95173943 "pdflatex"
+  "Sheet7.out" 1670175210 140 e41e9ec76e06a704c6361735357ef817 "pdflatex"
+  "Sheet7.tex" 1670173905 759 5cd16ccf4908d82072b4e1c11804fd46 ""
+  "c:/Users/User/Desktop/Modkrypt/Git/Exercise7/Sheet7.tex" 1670173905 759 5cd16ccf4908d82072b4e1c11804fd46 ""
   "c:/tools/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1669157314 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/tools/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1669154989 1004 54797486969f23fa377b128694d548df ""
   "c:/tools/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1669154989 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -30,6 +31,7 @@
   "c:/tools/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1669156039 1120 8b7d695260f3cff42e636090a8002094 ""
   "c:/tools/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb" 1669154989 32001 6aeea3afe875097b1eb0da29acd61e28 ""
   "c:/tools/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1669154989 36741 0ee9e374ec3e30da87cdfb0ea3575226 ""
+  "c:/tools/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1669154989 35469 dcf3a5f2fc1862f5952e3ee5eb1d98c4 ""
   "c:/tools/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1669154989 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "c:/tools/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1669154989 32726 39f0f9e62e84beb801509898a605dbd5 ""
   "c:/tools/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb" 1669154989 24393 3b7eb51a67a0a62aec5849271bdb9c2e ""
@@ -201,7 +203,7 @@
   "c:/tools/texlive/2022/texmf.cnf" 1669163180 713 e69b156964470283e0530f5060668171 ""
   "exercise1.tex" 1670172897 451 1d564ed1c9c05bc83b9529c4c6d28550 ""
   "exercise2.tex" 1670171483 1403 4d694026f77f2eec0f9e9cf4fe8beac8 ""
-  "exercise3.tex" 1669156116 4 e1c06d85ae7b8b032bef47e42e4c08f9 ""
+  "exercise3.tex" 1670175204 1014 9fc6ba59289e6aa126c40d64dbece585 ""
   "exercise4.tex" 1669156116 6 2228e977ebea8966e27929f43e39cb67 ""
   "setup/FAU_logo.pdf" 1669156116 253402 65175a5bbb78221acc372792beb8daf6 ""
   "setup/logo.png" 1669156116 81100 9d859029370866678fcda88548669834 ""
