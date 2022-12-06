@@ -1,7 +1,8 @@
-This modified encryption does not achieve CPA security.
-Here $H(m)$ will not be random for every encryption because Hash is 
-calculated only based on message. As an Adversary against CPA
-has access to encryption oracle, Adversary can atleast distuinguish correspoding 
-cipher to a message just by comparing the appended $H(m)$ part in the cipher. Hence this 
-new modified encryption doesnt have indistingushable enryptions and so not
-CPA secure.
+This modified encryption does not achieve CPA-security.
+\(H(m)\) is only collision-resistant and doesn't have to hide the message \(m\). If \(H(m)\) leaks the message \(m\) and this is concatenated with \(Enc(k, m)\) the resulting scheme \(Enc'(k, m)\) can't be CPA-secure. 
+%Here $H(m)$ will not be random for every encryption because Hash is 
+%calculated only based on message. As an Adversary against CPA
+%has access to encryption oracle, Adversary can atleast distuinguish correspoding 
+%cipher to a message just by comparing the appended $H(m)$ part in the cipher. Hence this 
+%new modified encryption doesnt have indistingushable enryptions and so not
+%CPA secure.
