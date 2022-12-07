@@ -1,3 +1,9 @@
-
-
+$\Pi'$ is unforgeable under an adaptive chosen message attack.\\
+For proof, let's assume $\Pi'$ is not unforgeable under an adaptive chosen message attack.
+Then there exists and adversary $\mathcal{A}$ who is able to find a valid message, tag pair in polynomial time.\\
+We use $\mathcal{A}$ to build an adversary $\mathcal{D}$ who breaks $\Pi_{M}$, an unforgeable MAC.\\
+$\mathcal{D}$ runs $\mathcal{A}$. When $\mathcal{A}$ seconds a message to $Mac'_{k}$, the message is hashed with $H^{s}(m)$ and input to MAC. MAC returns a tag t which is returned to  $\mathcal{A}$.\\
+$\mathcal{A}$ eventually outputs a valid message, tag pair in polynomial time.
+$\mathcal{D}$ therefore also outputs a valid message, tag pair in polynomial time.
+$\mathcal{D}$ is efficient because $\mathcal{A}$ is efficient and messages are only forwarded and hashed what happens in polynomial time too.
 
