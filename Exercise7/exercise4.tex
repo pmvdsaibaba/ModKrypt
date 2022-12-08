@@ -1,9 +1,11 @@
 $\Pi'$ is unforgeable under an adaptive chosen message attack.\\
 For proof, let's assume $\Pi'$ is not unforgeable under an adaptive chosen message attack.
-Then there exists and adversary $\mathcal{A}$ who is able to find a valid message, tag pair in polynomial time.\\
+Then there exists an adversary $\mathcal{A}$ against $\Pi'$ who is able to find a valid message, tag pair in polynomial time with a non-negligible probability.\\
 We use $\mathcal{A}$ to build an adversary $\mathcal{D}$ who breaks $\Pi_{M}$, an unforgeable MAC.\\
-$\mathcal{D}$ runs $\mathcal{A}$. When $\mathcal{A}$ seconds a message to $Mac'_{k}$, the message is hashed with $H^{s}(m)$ and input to MAC. MAC returns a tag t which is returned to  $\mathcal{A}$.\\
-$\mathcal{A}$ eventually outputs a valid message, tag pair in polynomial time.
+$\mathcal{D}$ runs $\mathcal{A}$. When $\mathcal{A}$ sends a message to $Mac'_{k}$, the message is hashed with $H^{s}(m)$ and is then input to MAC. MAC returns a tag t which is returned to  $\mathcal{A}$.\\
+$\mathcal{A}$ eventually outputs a valid message, tag pair in polynomial time, which $\mathcal{D}$ also outputs.
 $\mathcal{D}$ therefore also outputs a valid message, tag pair in polynomial time.
-$\mathcal{D}$ is efficient because $\mathcal{A}$ is efficient and messages are only forwarded and hashed what happens in polynomial time too.
+$\mathcal{D}$ is efficient because he invokes $\mathcal{A}$, which is efficient, and so the messages are of poly length. Because they are only forwarded and hashed this happens in polynomial time too.\\
+Because $\mathcal{A}$ can forge \(\Pi'\) with a non-negligible probability, $\mathcal{B}$ can forge \(\Pi_M\) with the same non-negligible probability. This is a contradiction because \(\Pi_M\) has to be unforgeable under an adaptive chosen message attack. So such an adversary $\mathcal{A}$ can not exist.\\
+Therefore it holds that $\Pi'$ is unforgeable under an adaptive chosen message attack.
 

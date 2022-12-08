@@ -8,7 +8,7 @@
 
 
 The adversary \(\mathcal{A}\) can choose the message m\(^{*}\) of length \(\ell\)(\(\lambda\)) \(\cdot\) \(\lambda\). We set \(\ell\)(\(\lambda\)) = l \\
-m\(^{*}\) =  m\(_{1}^{*}\) \(\vert \vert\) ...  \(\vert \vert\)  m\(_{l}^{*}\). We set m\(_{i}^{*}\) =  0\(^{\lambda}\). \\
+m\(^{*}\) =  m\(_{1}^{*}\) \(\vert \vert\) ...  \(\vert \vert\)  m\(_{l}^{*}\). We set m\(_{i}^{*}\) =  0\(^{\lambda}\) for 1 \(\leq\) i \(\leq\) l. \\
 We query m\(^{*}\) to our Mac\(_{k}\)(\(\cdot\)) oracle and recieve the tag t´\(^{*}\) = (IV\(^{*}\), t\(^{*}\)). IV\(^{*}\) \(\in\) \(\{\)0,1\(\}\)\(^{\lambda}\) is a randomly generated vector.\\
 \\
 c\(_{1}^{*}\) = F\(_{k}\)(IV\(^{*}\) \(\xor\) m\(_{1}^{*}\)) =  F\(_{k}\)(IV\(^{*}\) \(\xor\) 0\(^{\lambda}\)) = F\(_{k}\)(IV\(^{*}\)) \\
@@ -20,7 +20,7 @@ To break the security of the MAC the adversary \(\mathcal{A}\) can construct the
 m = 0\(^{\lambda-1}\)1 \(\vert \vert\) m\(_{2}^{*}\) \(\vert \vert\) ...  \(\vert \vert\)  m\(_{l}^{*}\)
 with IV = IV\(^{*}\) \(\xor\) 0\(^{\lambda-1}\)1 \\
 meaning we flip the last bit of the first block of our message as well as the last bit of our IV\(^{*}\).\\
-This causes that IV\(^{*}\) \(\xor\) m\(_{1}^{*}\) = IV \(\xor\) m\(_{1}\) and therefore \\ c\(_{1}^{*}\) = F\(_{k}\)(IV\(^{*}\) \(\xor\) m\(_{1}^{*}\)) =  F\(_{k}\)(IV \(\xor\) m\(_{1}\)) = c\(_{1}\) as well as all other c\(_{i}^{*}\) = c\(_{i}\) of the chain for i \(\in\) \(\{\)2,l\(\}\).\\
+This causes that IV\(^{*}\) \(\xor\) m\(_{1}^{*}\) = IV \(\xor\) m\(_{1}\) and therefore \\ c\(_{1}^{*}\) = F\(_{k}\)(IV\(^{*}\) \(\xor\) m\(_{1}^{*}\)) =  F\(_{k}\)(IV \(\xor\) m\(_{1}\)) = c\(_{1}\) as well as all other c\(_{i}^{*}\) = c\(_{i}\) of the chain for i \(\in\) \([2,l]\).\\
 \\
 We can conclude that t\(^{*}\) = t but m\(^{*}\) \(\neq\) m and therefore m was not queried to Mac\(_{k}\) before. \\
 \(\Rightarrow\) The adversary \(\mathcal{A}\) can now create the valid forgery (m, t´) with t´ = (IV, t\(^{*}\)) and can break the unforgability of the Mac.
