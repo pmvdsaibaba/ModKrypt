@@ -4,7 +4,7 @@ Given $\Pi_{MAC}$ = (Gen, Enc, Ver)
     $ t \leftarrow c = Enc(k,m) $ 
 \end{center}
 
-To prove if this construction is secure or not, the reduction is as in Figure \ref{Reduction}
+To prove by reduction as in Figure \ref{Reduction}
 
 \begin{figure}[h]
     \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{8-1.jpg}
@@ -13,7 +13,7 @@ To prove if this construction is secure or not, the reduction is as in Figure \r
     \centering
 \end{figure}
 
-First lets assume the contradiction that the construction is not secure MAC. That is probablity of forging
+Lets assume contradiction i.e., the MAC construction is not secure $\Rightarrow$ Probablity of forging
 this construction $\Pi_{MAC}$ is a non negligible function. i.e.,
 
 \begin{center}
@@ -27,24 +27,43 @@ such that $m^* \notin Q $, and $Ver_k(m^*, t^*) == 1$ with a probablity $\epsilo
 % As per the reduction, Ver uses the Dec by comparing $m^*$ with the message from Dec as shown in the Figure \ref*{Reduction}. 
 \newline
 
+% Let ValidQuery be the event that B submits a new $(c', t')$ to its
+% decryption oracle, Dec' without querying to Enc
 
-That implies
+
+% A MAC fogery is only possible when the $m*$ is not queried before and $t*$ should
+% be a valid. There exists a distinguisher 
+
+That means there exits an Adversary, A' able to use the decryption oracel Dec'
+with a new valid tag, $t^*$ and get the message $m''$ and distuingush with  $m^*$ with a probablity $ 1/2 + \epsilon(\lambda)$
+
+
 \begin{align}
-    Pr[ PrivK_{A,\Pi}(\lambda) = 1  \wedge \overline{ValidQuery}]  \leq \epsilon(\lambda)
+    % Pr[ PrivK_{A,\Pi}(\lambda) = 1  \wedge \overline{ValidQuery}]  \leq \epsilon(\lambda)
+     Pr[ PrivK_{A',\Pi}(\lambda) = 1 ] = 1/2 + \epsilon(\lambda)
     \label{eq1}
 \end{align}
-where $\epsilon(\lambda)$ is a non negligible function.\\
+
+% That implies
+% \begin{align}
+%     % Pr[ PrivK_{A,\Pi}(\lambda) = 1  \wedge \overline{ValidQuery}]  \leq \epsilon(\lambda)
+%     Pr[ PrivK_{A,\Pi}(\lambda) = 1 ]  \leq \epsilon(\lambda)
+%     \label{eq1}
+% \end{align}
+% where $\epsilon(\lambda)$ is a non negligible function.\\
 
 
 
-But given that $\Pi$ is a CCA secure enryption scheme. And for CCA,
+But given that $\Pi$ is a CCA secure enryption scheme. So
 \begin{align}
-    Pr[ PrivK_{A,\Pi}^{CCA}(\lambda) = 1  \wedge \overline{ValidQuery}]  \leq 1/2 + neg(\lambda)
+    % Pr[ PrivK_{A,\Pi}^{CCA}(\lambda) = 1  \wedge \overline{ValidQuery}]  \leq 1/2 + neg(\lambda)
+    Pr[ PrivK_{A',\Pi}^{CCA}(\lambda) = 1]  \leq 1/2 + neg(\lambda)
     \label{eq2}
 \end{align}
+where $neg(\lambda)$ is a negligible function. 
 
 
-Equation (\ref*{eq1}) and (\ref*{eq2}) are contradecting to each other. Thus our assumption is
-false and this construction is secure.
+Equation (\ref*{eq1}) and (\ref*{eq2}) are contradecting to each other as our assumtion 
+that $\epsilon(\lambda)$ is not a negligible is false.
 
 
