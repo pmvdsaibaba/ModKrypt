@@ -1,3 +1,10 @@
-
-
+\textbf{To show: } \(H(m) : \{0,1\}^{2k} \rightarrow \{0,1\}^{k+n}, H(m) := m_0 \vert \vert H'(m_1)\) is still a collision-resistant hash function when \(m = m_0 \vert \vert m_1, \abs{m_0} = \abs{m_1} = k\) and \(k > n\). \(H'(m) : \{0,1\}^{*} \rightarrow \{0,1\}^{n}\) is a collision-resistant hash function.\\
+\textbf{Proof} by contradiction. We assume there is an adversary \(\mathcal{A}\), who can break the collision-resistance of \(H(m)\) with non-negligible probability. We now build an adversary \(\mathcal{B}\) against the collision-resistance of \(H'(m)\) who invokes \(\mathcal{A}\). When  \(\mathcal{B}\) gets the hash value \(s' = H'(m_1)\) he prepends \(m_0\)\todo{How does he knows \(\abs{m_1} = k \)}, which he samples randomly. So he can give \(s= m_0 \vert \vert s' = m_0 \vert \vert H'(m_1)\) to the adversary \(\mathcal{A}\). \(\mathcal{A}\) then outputs two messages \(x_1, x_2\). \(\mathcal{B}\) computes his output by truncating the first half of \(x_1\) and \(x_2\). \\
+\(\mathcal{B}\) is an efficient adversary because \(\mathcal{A}\) is efficient, so the message length is poly and the call to \(\mathcal{A}\) needs only poly time and sampling and prepend \(m_0\) and truncating bit from \(x_1\) and \(x_2\) can also be done in polynomial time. \\
+To analyse the success, we know, that with non-negligible probability \(\mathcal{A}\) outputs two messages \(x_1, x_2\) with \(x_1 \neq x_2\) and \(H^s(x_1) = H^s(x_2)\). \(\mathcal{B}\) outputs only the second half of \(x_1\) and \(x_2\) which results in \(x_1', x_2'\). The probability that these are equal is \(\left(\dfrac{1}{2}\right)^{k}\), because for each position the probability that the bits are equal is \(\dfrac{1}{2}\). Therefore it holds that
+\begin{equation*}
+	Pr[HashColl_{\mathcal{B}}(\lambda) = 1] = Pr[HashColl_{\mathcal{A}}(\lambda) = 1] - 	Pr[x_1' == x_2'] = \verb|non-negl.| - \left(\dfrac{1}{2}\right)^{k}  = \verb|non-negl.|
+\end{equation*}
+Because this is a contradiction to the collision-resistance of \(H'(m)\) such an adversary \(\mathcal{A}\) cannot exist.\\
+It follows that \(H(m)\) is a collision-resistant hash function.
 
