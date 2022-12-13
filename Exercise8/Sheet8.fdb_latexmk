@@ -1,8 +1,8 @@
 # Fdb version 4
-["pdflatex"] 1670846892 "c:/Users/User/Desktop/Modkrypt/Git/Exercise8/Sheet8.tex" "Sheet8.pdf" "Sheet8" 1670846898 0
+["pdflatex"] 1670913275 "c:/Users/User/Desktop/Modkrypt/Git/Exercise8/Sheet8.tex" "Sheet8.pdf" "Sheet8" 1670913283 0
   "8-1.jpg" 1670841537 62297 1fa68c799ed9240feef76313aa26b857 ""
-  "Sheet8.aux" 1670846897 1772 765110c993411ab2587848c58da3eadc "pdflatex"
-  "Sheet8.out" 1670846897 140 e41e9ec76e06a704c6361735357ef817 "pdflatex"
+  "Sheet8.aux" 1670913282 1772 ff18e257d823166e9a59e502c52c0c88 "pdflatex"
+  "Sheet8.out" 1670913282 140 e41e9ec76e06a704c6361735357ef817 "pdflatex"
   "Sheet8.tex" 1669156116 748 a0a37d922eeb171865e8b69f8ea6e470 ""
   "c:/Users/User/Desktop/Modkrypt/Git/Exercise8/Sheet8.tex" 1669156116 748 a0a37d922eeb171865e8b69f8ea6e470 ""
   "c:/tools/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1669157314 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -214,7 +214,7 @@
   "c:/tools/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1669163230 4662789 375f0af22cde7805cebca5eda7d22db1 ""
   "c:/tools/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1669163376 3063410 8b9ffd5986be4418c50586fad25e9fae ""
   "c:/tools/texlive/2022/texmf.cnf" 1669163180 713 e69b156964470283e0530f5060668171 ""
-  "exercise1.tex" 1670846883 2477 259a3210f8e852d5de449a01e8a37707 ""
+  "exercise1.tex" 1670913272 3472 1d2e5d9415caee156623d96edcdfd047 ""
   "exercise2.tex" 1669156116 6 44555ce334e4417e06aacfce544bd88b ""
   "exercise3.tex" 1669156116 4 e1c06d85ae7b8b032bef47e42e4c08f9 ""
   "exercise4.tex" 1670829579 2139 ec383ea28c0a468aeb3ff9700e5663bb ""
