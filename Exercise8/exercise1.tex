@@ -1,20 +1,20 @@
-Given $\Pi_{MAC}$ = (Gen, Enc, Ver)\\
+%Given $\Pi_{MAC}$ = (Gen, Enc, Ver)\\
 
 % \begin{center}
 %     $ t \leftarrow c = Enc(k,m) $ 
 % \end{center}
 
-To prove by reduction as in Figure \ref{Reduction}
+%To prove by reduction as in Figure \ref{Reduction}
+%
+%\begin{figure}[h]
+%    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{8-1.jpg}
+%    \caption{Proof by Reduction}
+%    \label[figure]{Reduction}
+%    \centering
+%\end{figure}
 
-\begin{figure}[h]
-    \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{8-1.jpg}
-    \caption{Proof by Reduction}
-    \label[figure]{Reduction}
-    \centering
-\end{figure}
-
-Lets assume contradiction i.e., the MAC construction is not secure $\Rightarrow$ Probablity of forging
-this construction $\Pi_{MAC}$ is a non negligible function. i.e.,
+Lets assume towards contradiction that the MAC construction is not secure $\Rightarrow$ Probablity of forging
+this construction $\Pi_{MAC}$ is a non negligible function:
 
 \begin{center}
     $Pr[MacForge_{A,\Pi_{MAC}} = 1] \leq \epsilon(\lambda)$
@@ -22,7 +22,7 @@ this construction $\Pi_{MAC}$ is a non negligible function. i.e.,
 where $\epsilon(\lambda)$ is a non negligible function.\\
 
 
-That implies there exists an adversary, A, able to generate a new message and tag pair $(m^*, t^*)$
+That implies there exists an efficient adversary, A, able to generate a new message and tag pair $(m^*, t^*)$
 such that $m^* \notin Q $, and $Ver_k(m^*, t^*) == 1$ with a probablity $\epsilon(\lambda)$. 
 % As per the reduction, Ver uses the Dec by comparing $m^*$ with the message from Dec as shown in the Figure \ref*{Reduction}. 
 \newline
@@ -67,23 +67,25 @@ such that $m^* \notin Q $, and $Ver_k(m^*, t^*) == 1$ with a probablity $\epsilo
 % that $\epsilon(\lambda)$ is not a negligible is false.
 
 
-We now consider B attacking the MAC i.e., B runs A as subroutine. B choose two messages, lets 
-say $\widetilde{m_0}$ and $\widetilde{m_1}$ as $m^*$ and any other random message
-respectively. If B gets the tag a $t^*$, it corresponds to $m^*$ otherwise it correponds 
-to random message. So here the success probablity of B is,
-\begin{align}
-    Pr[ PrivK_{B,\Pi'}^{CCA}(\lambda) = 1] \leq |(1 - \epsilon(\lambda))/2|
-    \label{eq1}
-\end{align}
-
-But given that $\Pi$ is a CCA secure enryption scheme. So for CCA secure Adversary A',
-\begin{align}
-    Pr[ PrivK_{A',\Pi}^{CCA}(\lambda) = 1]  \leq 1/2 + neg(\lambda)
-    \label{eq2}
-\end{align}
-where $neg(\lambda)$ is a negligible function. \\
-
-Both equations (\ref*{eq1}) and (\ref*{eq2}) are valid only when
-unless $\epsilon(\lambda)$ is a negligible function which is contradiction to 
-our assumption. Hence our assumption that such an Adversary exists is false. 
-And the construction is secure.
+We now consider \(\mathcal{B}\) attacking the CCA-securitv. \(\mathcal{B}\) runs \(\mathcal{A}\) as subroutine. \(\mathcal{B}\) only forward all encryption queries that \(\mathcal{A}\) asks for to his own encryption oracle. Finally \(\mathcal{A}\) outputs a message-tag-pair \(m^*, t^*\). \(\mathcal{B}\) then chooses two messages, lets 
+say $\widetilde{m_0}$ as $m^*$ and $\widetilde{m_1}$ as any other random message. If \(\mathcal{B}\) gets the tag $t^*$ as \(\widetilde{c_b}\), it corresponds to $m_0 = m^*$ otherwise it correponds to random message $m_1$. This holds, because \(Dec_k(t) = m \Leftrightarrow Enc_k(m) = t\).\\
+\(\mathcal{B}\) is efficient because it only forwards messages, which are of polynomial length (because \(\mathcal{A}\) is efficient), chooses a random number and invokes \(\mathcal{A}\). 
+Because \(\mathcal{A}\) can break the MAC with non-negligible probability $\epsilon(\lambda)$ and \(\mathcal{B}\) uses this in every case, \(\mathcal{B}\) can break the CCA security also with non-negligible probability $\epsilon(\lambda)$. 
+%So here the success probablity of B is,
+%\begin{align}
+%    Pr[ PrivK_{B,\Pi'}^{CCA}(\lambda) = 1] \leq |(1 - \epsilon(\lambda))/2|
+%    \label{eq1}
+%\end{align}
+%
+%But given that $\Pi$ is a CCA secure enryption scheme. So for CCA secure Adversary A',
+%\begin{align}
+%    Pr[ PrivK_{A',\Pi}^{CCA}(\lambda) = 1]  \leq 1/2 + neg(\lambda)
+%    \label{eq2}
+%\end{align}
+%where $neg(\lambda)$ is a negligible function. \\
+%
+%Both equations (\ref*{eq1}) and (\ref*{eq2}) are valid only when
+%unless $\epsilon(\lambda)$ is a negligible function which is contradiction to 
+%our assumption. 
+Because this a contradiction to the CCA security of \(\Pi\), our assumption that such an adversary \(\mathcal{A}\) against the collision resistance of \(\Pi_{MAC}\) exists, is false. 
+So \(\Pi_{MAC}\) is a collision resistant MAC.
