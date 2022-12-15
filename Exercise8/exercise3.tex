@@ -1,2 +1,7 @@
-
+$F_{k}(x) := H(k\parallel x)$ is not a pseudorandom function.\\
+Proof:\\
+Let's assume the fixed-length collision resistant hash function (Gen, $h$) that is used in the Merkle-Damgard construction always concatenates a $1$ at the beginning of every output. This property is perfectly legal for a fixed-length collision resistant hash function.\\
+For each step in the Merkle-Domgard construction, the output will therefore have a $1$ at the beginning as each $z_{i} := h^{s}(z_{i-1}\parallel x_{i})$.\\
+Therefore, $F_{k}(x) := H(k\parallel x)$ will also always have its output starting with a $1$.\\
+$F_{k}(x)$ can easilily be distinguished from a uniformly selected function $f$. In polynomial time, a distinguisher can easily determine that $F_{k}(x)$ is not truely random as $1$ always being the first bit is an obvious hint.
 
