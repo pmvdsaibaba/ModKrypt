@@ -1,7 +1,7 @@
 \begin{itemize}
 \item[(a)]
 	Assume \(H\) is not collision resistant. \\
-	This means finding \(x_0 \neq x_1\) so that \(H^{s_0 \vert\vert s_1}(x_0) = H^{s_0 \vert\vert s_1}(x_1)\) is non-negl. \\
+	This means finding \(x_0 \neq x_1\) so that \(H^{s_0 \vert\vert s_1}(x_0) = H^{s_0 \vert\vert s_1}(x_1)\) is possible with non-negl. probability. \\
 	\(H^{s_0 \vert\vert s_1}(x_0) = H^{s_0 \vert\vert s_1}(x_1) \Leftrightarrow H^{s_0}_0(H^{s_1}_1(x_0)) = H^{s_0}_0(H^{s_1}_1(x_1)) \) \\
 	Define \(H^{s_1}_1(x_0) = y_0\) and \(H^{s_1}_1(x_1) = y_1\). \\
 	For \(H^{s_0 \vert\vert s_1}(x_0) = H^{s_0 \vert\vert s_1}(x_1)\) to have a collision either \(y_0 = y_1 = y\) \\
@@ -21,7 +21,7 @@
 	\begingroup
 	\leftskip1.5em
 	\rightskip\leftskip
-		Assume \(H_0\) is collision resistant but \(H_1\) is not, making finding \(x_0 \neq x_1\) so that \(H^{s_1}_1(x_0) = H^{s_1}_1(x_1)\) is negl. \\
+		Assume \(H_0\) is collision resistant but \(H_1\) is not, making finding \(x_0 \neq x_1\) so that \(H^{s_1}_0(x_0) = H^{s_1}_0(x_1)\) is negl. \\
 		If \(H^{s_1}_1(m) = c\) with \(c\) being a constant value for all \(m\) then \(H^{s_0 \vert\vert s_1}(m) = H^{s_0}_0(m) \vert\vert c\)\\
 		This produces a string with the same collision resistance propability as \(H_0\) since only a constant string \(c\) is added at the end.\\
 		If \(H_1\) is some other function, the collision probability becomes even smaller since there are even more different strings produceable this way.\\ 
@@ -30,6 +30,7 @@
 	\par
 	\endgroup
 	\(\Rightarrow\) contradiction: \(H\) can't be non-negl. since it has to have at least the collision resistant propablility as the collision resistant  \(H_i\) \(i \in \{0,1\}\) which is negl. \\
+	\(\Rightarrow H\) is collision resistant.\\
 
 \item[(c)] 
 	\(H'(m) = H^{c(m)}(r(m))\) with \(m\) of the format \(0^n1\vert\vert x\) and \(c(m) = n\) and \(r(m) = x\). \\
