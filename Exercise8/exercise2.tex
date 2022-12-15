@@ -21,7 +21,7 @@
 	\begingroup
 	\leftskip1.5em
 	\rightskip\leftskip
-		Assume \(H_0\) is collision resistant but \(H_1\) is not, making finding \(x_0 \neq x_1\) so that \(H^{s_1}_0(x_0) = H^{s_1}_0(x_1)\) is negl. \\
+		Assume \(H_0\) is collision resistant but \(H_1\) is not, making finding \(x_0 \neq x_1\) so that \(H^{s_0}_0(x_0) = H^{s_0}_0(x_1)\) is negl. \\
 		If \(H^{s_1}_1(m) = c\) with \(c\) being a constant value for all \(m\) then \(H^{s_0 \vert\vert s_1}(m) = H^{s_0}_0(m) \vert\vert c\)\\
 		This produces a string with the same collision resistance propability as \(H_0\) since only a constant string \(c\) is added at the end.\\
 		If \(H_1\) is some other function, the collision probability becomes even smaller since there are even more different strings produceable this way.\\ 
