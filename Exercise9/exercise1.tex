@@ -2,11 +2,11 @@
     \item [(a)] Proof by reduction:
 Lets assume efficient adversary, $A$, against $f$, i.e, it breaks one wayness of
 the function i.e., $A$ could invert the $f(x)$ with a non negligible probability.
-So $A$ could find $x'$ such that $f(x') = f(x)$
+So $A$ could find $x'$ such that $f(x') = f(x)$.
 
 
-Now contrust an adversary, $A'$, against hardcore bit, $h$, using $A$. So $A'$
-could find $h(x')$ using $A$ capability to find $x'$ from $f(x')$. And so could find $h(x)= h(x')$ 
+Now construct an adversary, $A'$, against hardcore bit, $h$, using $A$. So $A'$
+could find $h(x')$ using $A$'s capability to find $x'$ from $f(x')$. And so could find $h(x)= h(x')$ 
 in a PPT with a non negligible probability. But this is contradiction to our assumption,
 as for hardcore bit it is not possible to find $h(x)$ with a 
 non negligible probability. Hence such $A$ doesnt exists. Hence this contrunction is secure.
@@ -15,5 +15,5 @@ non negligible probability. Hence such $A$ doesnt exists. Hence this contrunctio
   For this function it is hard for an Adversary to compute $h(x)$ from $f(x)$.
   Constant function is not a one way function. Because for constant function any value from domain
   as input to $f$ will be same as $f(x)$. Hence the above conclusion from (a) is not true 
-  for a OWF
+  for a OWF.
 \end{itemize}
