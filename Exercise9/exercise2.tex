@@ -1,2 +1,11 @@
-  
+We assume for the sake of contradiction an efficient inverter \(\mathcal{A}\) for \(G\) that breaks \(G\) with non-negligible probability \(\epsilon(\lambda)\) and then build a distinguisher \(\mathcal{D}\) for \(G\). This distinguisher gets a value \(y\) from an oracle which either outputs \(G(s)\) (\(G : \{0,1\}^k \rightarrow \{0,1\}^{2k}\)) or a random value \(r\) of length \(2k\). He forwards this value to the inner adversary \(\mathcal{A}\), which outputs a value \(x'\), for which \(G(x') = y\) holds, if the input is in the output space of \(G\) otherwise \(\mathcal{A}\) outputs (nothing/ a fixed value)???. 
+\(\mathcal{D}\) can then distinguish, if the input \(y\) to \(\mathcal{A}\) was in the  output space of \(G\), then he returns \(0\), otherwise the input \(y\) was a random message, then he returns \(1\). \\
+\(\mathcal{D}\) is efficient, because he invokes \(\mathcal{A}\) and \(\mathcal{A}\) is efficient. It also follows, that the message length of the messages \(\mathcal{D}\) forwards has to be poly and forwarding is in poly time too. \\
+If the oracle outputs a pseudorandom string \(G(s)\), \(\mathcal{D}\) perfectly simulates \(G\) to \(\mathcal{A}\). It follows, that \(Pr[\mathcal{D}(G(s)) = 1] = Pr[Invert_{\mathcal{A},G}(\lambda) = 1] = \epsilon(\lambda)\).\\
+For the case where the oracle outputs a random string \(r\), the probability that one message is in the output space of \(G\) is \(\dfrac{2^k}{2^{2k}} = 2^{-k}\). (Here we need that the output length of \(G\) is \(2k\) and not \(k+1\).) For \(q\) messages the probability is \(\dfrac{q}{2^{-k}}\), but since q is poly (because \(\mathcal{A}\) has to be efficient), this is still negligible. \\
+So \(\abs{Pr[\mathcal{D}(G(s)) = 1] - Pr[\mathcal{D}(r) = 1] } = \epsilon(\lambda) - \dfrac{q}{2^{-k}} > negl(\lambda)\). This is a contradiction to the pseudorandomness of \(G\), so such an adversary \(\mathcal{A}\) cannot exist. 
+It follows that \(G(s)\) is a OWF by itself. 
+
+
+%The success of \(\mathcal{D}\) when given a pseudorandom string should be roughly ε. On the other hand, you should argue that the success of D on a random string must be negligible.  
   
