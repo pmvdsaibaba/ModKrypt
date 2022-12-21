@@ -2,18 +2,19 @@
     \item [(a)] Proof by reduction:
 Lets assume efficient adversary, $A$, against $f$, i.e, it breaks one wayness of
 the function i.e., $A$ could invert the $f(x)$ with a non negligible probability.
-So $A$ could find $x'$ such that $f(x') = f(x)$.
+So $A$ could find $x'$ such that $f(x') = f(x)$. 
+Because \(f\) is a PRP, \(f\) is bijective and therefore \(x = x'\).
 
 
-Now construct an adversary, $A'$, against hardcore bit, $h$, using $A$. So $A'$
-could find $h(x')$ using $A$'s capability to find $x'$ from $f(x')$. And so could find $h(x)= h(x')$ 
-in a PPT with a non negligible probability. But this is contradiction to our assumption,
-as for hardcore bit it is not possible to find $h(x)$ with a 
-non negligible probability. Hence such $A$ doesnt exists. Hence this contrunction is secure.
+Now construct an adversary, $A'$, against hardcore bit, $h$, using $A$. 
+%So $A'$ could find $h(x')$ using $A$'s capability to find $x'$ from $f(x')$. And so could find $h(x)= h(x')$ in a PPT with a non negligible probability. 
+\(A'\) forwards any \(y\) he gets to \(A\). With the recieved \(x'\) he then computes \(hc(x')\) which he outputs. \\
+\(A'\) invokes \(A\) and \(A\) is efficient. Therefore the message length of the messages must be poly. Forwarding the messages and computing \(hc(x')\) can also be done in polynomial time. So \(A'\) is efficient.\\
+\(A'\) simulates \(f\) perfectly to \(A\), so the output of \(A\) is \(x' = x\) with non negligible probability. \(A'\) then computes \(hc(x')\) which is the same like \(hc(x)\), because \(x = x'\), so \(A'\) wins with the same non negligible probability. \\
+But this is contradiction to our assumption, as for the hardcore bit it is not possible to find a value \(h\) which is equal to $hc(x)$ with a  non negligible probability. Hence such $A$ does not exist. Hence this contrunction is secure.
 
     \item [(b)] Let $f$ be a constant function and $h$ be most significant bit, $msb(x)$.
-  For this function it is hard for an Adversary to compute $h(x)$ from $f(x)$.
+  For this function it is hard for an Adversary to compute $h(x)$ from $f(x)$. Because \(f(x) = c \forall x\) and this makes it impossible to know/compute \(x\) which is necessary to compute \(hc(x)\). 
   Constant function is not a one way function. Because for constant function any value from domain
-  as input to $f$ will be same as $f(x)$. Hence the above conclusion from (a) is not true 
-  for a OWF.
+  as input to $f$ will be same as the recieved $f(x)$. Hence the above conclusion from (a) is not true for a OWF.
 \end{itemize}
