@@ -1,1 +1,21 @@
- 
+
+To show that computing \(\varphi(N)\) is equivalent to factoring \(N\) we must prove:
+\begin{itemize}
+\item [1.]
+If there exists an efficient algorithm to compute \(\varphi(N)\) given \(N\), there also exists an efficient algorithm for factoring \(N\).\\ \\
+\(\varphi(N)\) is defined as \(|\{a \in\) $\mathbb{N}$ \(: 0 \leq a \leq N-1, gcd(a, N) = 1\}|\) \\
+(\(\Rightarrow\) Number of integers relativly prime to \(N\))\\
+However computing this brute force would require at least N steps which is not efficient. But \(\varphi(N)\) can be easily computed with the following formula: 
+\(\varphi(N) = \Pi p_i^{e_i - 1}(p_i - 1)\). Since \(N = pq\) with \(p\) and \(q\) being primes (per definition of the RSA modulus), \(\varphi(N) = (p-1) \cdot (q-1)\).
+If we can compute \(\varphi(N) = x \cdot y\), we also can factorize \(N\) as \(N = (x+1) \cdot (y+1)\). \\
+\(\Rightarrow\) Computing \(\varphi(N)\) implies factoring \(N\) \\
+
+\item [2.]
+If there exists an efficient algorithm for factoring \(N\) given \(N\), there also exists an efficient algorithm to compute \(\varphi(N)\).\\ \\
+Assuming there is an efficient algorithm for factoring \(N\) we can efficiently compute \(N = pq\) with \(p\) and \(q\) being primes (per definition of the RSA modulus).\\
+Knowing \(p\) and \(q\) we can efficiently compute \(\varphi(N)\) as \(\varphi(N) = (p-1)\cdot(q-1)\) since \(\varphi(N) = \Pi p_i^{e_i - 1}(p_i - 1)\).\\
+\(\Rightarrow\) Factoring \(N\) implies computing \(\varphi(N)\)\\
+
+\end{itemize}
+
+Factoring \(N\) \(\Leftrightarrow\) Computing \(\varphi(N)\)\\
