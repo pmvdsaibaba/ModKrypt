@@ -31,4 +31,69 @@ Inversion:
 		So he can distinguish between the two-round Feistel network and a random permutation with non-negligible probability, so a two-round Feistel network is not a pseudorandom permutation. 
 	\item [2.]
 		\textbf{To show:} Prove that a three-round Feistel network using pseudorandom round functions is not a strongly pseudorandom permutation.
+
+		
+		\textbf{Note:} Inversion formula stated in lecture note is wrong.
+		
+		position of L3 and R3 should be as $ Data = (R3||L3)$ 
+
+			% $L_2= R_3 \xor f_3(R_2) = R_3 \xor f_3(L_3)  R_2 = L_3 $\\
+			% $L_1= R_2 \xor f_2(R_1) = L_3 \xor f_2(R_3 \xor f_3(L_3)) & R_1 = L_2 = R_3 \xor f_3(L_3)$\\
+
+
+			% $L_0 = R_3 \xor f_3(L_3) \xor f_1(L_3 \xor f_2(R_3 \xor f_3(L_3)))$
+			
+
+			% $R_0 = L_3 \xor f_2(R_3 \xor f_3(L_3))$
+
+
+			In lecture note, the position of L3 and R3 is opposite i.e., $ Data = (L3||R3)$ This convention is wrong.
+
+
+			So for avoiding confusion, if  $ Data = (L3||R3)$, then 
+
+			$L_0 = R_3 \xor f_2(L_3 \xor f_3(R_3))$
+
+			$R_0 = L_3 \xor f_3(R_3) \xor f_1(R_3 \xor f_2(L_3 \xor f_3(R_3)))$
+
+			
+			Now coming to proof:
+
+
+			Let us generalize this notation as $D_{k_1,k_2,k_3} \left (L||R\right ) = \left (x||y\right ) $ as the inversion formula for third order.			
+			And $E_{k_1,k_2,k_3} \left (L||R\right ) = \left (x||y\right ) $ as normal feistel network formula.
+
+
+			Here is a Adversary that disingushes with high probability
+
+			\begin{itemize}
+				\item Query the decryption oracle with two strings of zero bits: $(a||b) \leftarrow D(0||0)$
+				\item Query the encryption oracle:  $(c||d) \leftarrow E(0||a)$ 
+				\item Query the decryption oracle again: $(e||f) \leftarrow D(b \xor d ||c)$ 
+				\item If $ e= c\xor a$ then return 1, else return 0
+			\end{itemize}
+			
+			Explanation:
+			\begin{itemize}
+				\item Query the decryption oracle with two strings of zero bits: $(a||b) \leftarrow D(0||0)$\\
+				By using expansion of $D$ \\
+				$ a =f_2(f_3(0)) $\\
+				$ b= f_3(0) \xor f_1(a)$
+				\item Query the encryption oracle:  $(c||d) \leftarrow E(0||a)$ 
+				By using expansion of $E$ \\
+				$ c = a\xor f_2(f_1(a)) $\\
+				$ d = f_1(a) \xor f_3(c)$
+
+
+				now on calculating $b\xor d = f_3(0) \xor f_3(c)$ we see that $f_1(a)$ cancels out.
+				\item Query the decryption oracle again: $(e||f) \leftarrow D(b \xor d ||c)$ 
+				Now again by using the expansion of $D$ we get 
+
+				$e = c \xor a$
+				\item Hence the adversary can check if $ e == c\xor a$ then differentiate if the output is from feistel network or random.
+			\end{itemize}
+			Reference: https://crypto.stackexchange.com/questions/32974/example-of-a-prp-that-is-not-a-strong-prp
+
+
+
 \end{itemize}
