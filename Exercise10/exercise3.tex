@@ -1,1 +1,19 @@
- 
+$F_{k_{j}}$ does not lead to a secure strong PRP.\\
+An adversary can query $(0^{\frac{n}{2}} \parallel 0^{\frac{n}{2}})$ and $(0^{\frac{n}{2}} \parallel 1^{\frac{n}{2}})$.\\
+This leads to the L and R values of\\
+$(0^{\frac{n}{2}} \parallel 0^{\frac{n}{2}})$ :\\
+$L_{0} = 0^{\frac{n}{2}}$ $R_{0} = 0^{\frac{n}{2}}$
+$L_{1} = 0^{\frac{n}{2}}$ $R_{1} = k_{0}$
+$L_{2} = k_{0}$ $R_{2} = k_{0} \oplus k_{1}$
+$L_{3} = k_{0} \oplus k_{1}$ $R_{3} = k_{1} \oplus k_{2}$
+$L_{4} = k_{1} \oplus k_{2}$ $R_{4} = k_{0} \oplus k_{2} \oplus k_{3}$
+\\
+$(0^{\frac{n}{2}} \parallel 1^{\frac{n}{2}})$ :\\
+$L_{0} = 0^{\frac{n}{2}}$ $R_{0} = 1^{\frac{n}{2}}$
+$L_{1} = 1^{\frac{n}{2}}$ $R_{1} = k_{0} \oplus 1^{\frac{n}{2}}$
+$L_{2} = k_{0} \oplus 1^{\frac{n}{2}}$ $R_{2} = k_{0} \oplus k_{1}$
+$L_{3} = k_{0} \oplus k_{1}$ $R_{3} = k_{1} \oplus k_{2} \oplus 1^{\frac{n}{2}}$
+$L_{4} = k_{1} \oplus k_{2} \oplus 1^{\frac{n}{2}}$ $R_{4} = k_{0} \oplus k_{2} \oplus k_{3} \oplus 1^{\frac{n}{2}}$\\
+When we compare the queries, either $L_{i}$,  $R_{i}$ or both from one query is the inverse to $L_{i}$,  $R_{i}$ or both, respectively, from the other query.\\
+An adversary can therefore distinguish this construction from a truely random one.
+
