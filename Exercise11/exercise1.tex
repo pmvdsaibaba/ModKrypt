@@ -1,1 +1,48 @@
- 
+\begin{itemize}
+	\item [(a)]
+	\textbf{To show:} A group contains exactly one identity element. That is, if \(e\) and \(1\) are both identities
+	in a group \(\mathds{G}\), then \(1 = e\).\\
+	\(e\) is an identity: \(e \circ g = g = g \circ e \hspace{0.5cm} \forall g \in \mathds{G}\)\\
+	\(1\) is an identity: \(1 \circ g = g = g \circ 1 \hspace{0.5cm} \forall g \in \mathds{G}\)
+	
+	\begin{equation*}
+		\begin{array}{rll}
+			g &=g &\\
+			e \circ g &= 1 \circ g & \vert \circ g^{-1}\\
+			e \circ e &= 1 \circ e & \\
+			e &= 1 &			
+		\end{array}
+	\end{equation*}
+
+	\item [(b)]
+	\textbf{To show:} If an element \(l\) is a left identity element of \(\mathds{G}\), which means that \(l \circ g = g\) for all \(g \in \mathds{G}\), then it is the identity element.\\
+	\(l\) is an identity: \(l \circ g = g = g \circ l \hspace{0.5cm} \forall l \in \mathds{G}\)\\
+	\begin{equation*}
+		\begin{array}{rll}
+			l \circ g &=g & \vert \circ g^{-1}\\
+			l \circ e &= g \circ g^{-1} & \\
+			l &= e &			
+		\end{array}
+	\end{equation*}
+
+	\item [(c)]
+	\textbf{To show:} The inverse of \(g \circ h\) is \(h^{-1} \circ g^{-1}\).
+	\begin{equation*}
+		(g \circ h) \circ (h^{-1} \circ g^{-1}) = g \circ (h \circ h^{-1}) \circ g^{-1} = g \circ e \circ g^{-1} = g  \circ g^{-1} = e			
+	\end{equation*}
+	\item [(d)]
+	\textbf{To show:} \(g^n\) denotes \(e \circ g \circ g \circ ... \circ g\), with \(g\) appearing \(n\) times (for \(n \ge 0\)). Show that \((g^{-1})^n\) is the inverse of \(g^n\) for all \(n \ge 0\). (For this reason we define \(g^{-n} := (g^{-1})^n\).)
+	\begin{equation*}
+		\begin{array}{l}
+		g^n \circ (g^{-1})^n = (e \circ g \circ g \circ ... \circ g \circ g) \circ (e \circ g^{-1} \circ g^{-1} \circ ... \circ g^{-1} \circ g^{-1}) \\
+		= (g \circ g \circ ... \circ g \circ g) \circ (g^{-1} \circ g^{-1} \circ ... \circ g^{-1} \circ g^{-1})
+		= (g \circ (g \circ ... \circ  (g\circ (g \circ g^{-1}) \circ g^{-1}) \circ ... \circ g^{-1})\circ g^{-1})\\
+		= (g \circ (g \circ ... \circ  (g\circ e \circ g^{-1}) \circ ... \circ g^{-1})\circ g^{-1})
+		= (g \circ (g \circ ... \circ  (g \circ g^{-1}) \circ ... \circ g^{-1})\circ g^{-1})
+		= e
+		\end{array}		
+	\end{equation*}
+
+	\item [(e)]
+	\textbf{To show:} Show that if \(\mathds{G}\) is finite and \(g \in \mathds{G}\), then there exists an \(n > 0\) such that \(g^n = e\). (The smallest such \(n\) is called the order of \(g\).)
+\end{itemize} 
