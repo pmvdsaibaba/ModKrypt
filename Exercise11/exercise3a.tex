@@ -1,0 +1,12 @@
+\textbf{To show:} If an algorithm \(\mathcal{A}\) exists that can solve the DL problem in poly time with probability \(\epsilon\), then an algorithm  \(\mathcal{B}\) exists that can decide the CDH problem in poly time with probability \(\epsilon\).\\
+We show this by reduction. 
+We assume there exists efficient adversary \(\mathcal{A}\) against the DL problem that manages to compute $x$ such that $g^{x} = h$, given $g$ and $h$.\\
+We construct \(\mathcal{B}\) against the CDH problem which invokes \(\mathcal{A}\). 
+\(\mathcal{B}\) receives a group \(\mathcal{G}\) of order \(q\) with \(g\), \(g^x\), and \(g^y\).
+\(\mathcal{B}\) forwards the group \(G\) of order \(q\) with \(g\) and \(g^x\) to \(\mathcal{A}\). 
+\(\mathcal{A}\) outputs $x$. 
+\(\mathcal{B}\) uses $x$ to compute $z = (g^{y})^{x}$ what can be done in poly time.
+\(\mathcal{B}\) outputs $z$.\\
+\(\mathcal{B}\) invokes \(\mathcal{A}\) and \(\mathcal{A}\) is efficient. 
+\(\mathcal{B}\) only forwards parts of its input and calculates $z = (g^{y})^{x}$, and is ,therefore, efficient as well and has the same success probability \(\epsilon\) as \(\mathcal{A}\) .\\
+\(\mathcal{B}\) simulates the CDH problem perfectly. The success probability is \(\epsilon\).
