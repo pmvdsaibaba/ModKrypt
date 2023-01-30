@@ -1,1 +1,9 @@
+We want to show, that if the Quadratic Residuosity Assumption holds, \(F_k(x) := H (k \abs{} x)\) is a pseudorandom function.\\
+We assume towards contradiction, that there exists an efficient adversary \(\mathcal{A}\) against the pseudorandomness of \(F\). That means, that \(\mathcal{A}\) can distinguish between a pseudorandom function and a truely random function with non-negligible probability \(\epsilon\).\\
+We now construct an adversary \(\mathcal{B}\) against the Quadratic Residuosity Assumption as follows:\\
+\(\mathcal{B}\) invokes \(\mathcal{A}\) and answers any query of \(x\) by asking \(k \abs{} x\) to the random oracle \(H\) and returns the answer of \(H\) to \(\mathcal{A}\). \(H\) is constructed as follows: If \(k \abs{} x\) was already queried to \(H\) the saved \(H(k \abs{} x)\) is returned. Otherwise \(H\) returns the next value \(q\) \(\mathcal{B}\) gets from his oracle (which outputs either \(qr \in QR_N\) or \(qnr \in QNR_N\)) which is different from the previous values of \(q\) and saves the resulting pair \((x, q)\).
+Eventually \(\mathcal{A}\) outputs a bit \(b'\) and \(\mathcal{B}\) outputs the same bit.\\
+\(\mathcal{B}\) invokes \(\mathcal{A}\) and \(\mathcal{A}\) is efficient and so the message length are poly. Furthermore forwarding messages and storing and searching in poly many value pairs can be done in poly time too. So \(\mathcal{B}\) is also efficient.\\
+To analyse the success, we distinguish two different cases:\\
+If \(qr \in QR_N\) 
  
