@@ -41,11 +41,11 @@
          Let $C_0 = Enc(ek, m_0)$ and $C_1 = Enc(ek, m_1)$ be the ciphertexts corresponding to $m_0$ and $m_1$, respectively. 
          The adversary outputs its guess $b'$ for the message it thinks was encrypted.
         
-         
+
         To prove CPA-security, we need to show that the probability of the adversary guessing correctly,
          i.e., $b' = b$, where $b$ is the actual message, is negligibly close to $1/2$. 
          Let $r_0$ and $r_1$ be the randomness used in the encryptions of $m_0$ and $m_1$, respectively. 
-         The ciphertexts $C_0$ and $C_1$ are given by $(g_b^{r_b}, h_b^{r_b})$, where $b \in \brace{0, 1}$.
+         The ciphertexts $C_0$ and $C_1$ are given by $(g_b^{r_b}, h_b^{r_b})$, where $b$ is ${0, 1}$.
         
         Since $g_0$ and $g_1$ are both generators of the subgroup $QR_p$ and $h_0 = g_0^{x_0}$ and $h_1 = g_1^{x_1}$
          are completely independent from $g_0$ and $g_1$, it follows that $(g_0, g_1, h_0, h_1)$ is a "random" non-DDH tuple.
