@@ -1,1 +1,56 @@
- 
+\begin{itemize}
+	\item [1.]
+    The decryption algorithm is as follows:
+
+
+    Given the ciphertext $C=(g_m^r, h_m^r)$ and the secret key $dk=(x_0, x_1)$, compute $g_m^{r * x_m}$ mod $p$ and $h_m^{r *x_m}$ mod $p$.
+    If $C$ i.e., $(g_m^r, h_m^r) == (g_1^{x_1}, h_1^{x_1})$ mod $p$, then $m$ is recovered as $m = 1$.
+     If $C i.e, (g_m^r, h_m^r) == (g_0^{x_0}, h_0^{x_0})$ mod $p$, then m is recovered as m = 0.
+
+    \item [2.]
+    The lossy key generation algorithm $LossyGen(1^\lambda)$ proceeds as follows:
+
+    Run $Gen(1^\lambda)$ to get $ek = (g_0, g_1, h_0, h_1)$ and $dk = (x_0, x_1)$.
+
+    Choose a random $ \alpha \in \mathbb{Z}_q$.
+    Compute $g_1' = g_0^\alpha$.
+    Output $ek' = (g_0, g_1', h_0, h_1)$ as the public key and $dk' = (x_0, x_0 + \alpha x1)$ as the secret key.
+
+    This algorithm satisfies both properties 1 and 2 of a lossy public key encryption based on the DDH assumption:
+
+    
+    first property: 
+        Given $ek' = (g_0, g_1', h_0, h_1)$, it is computationally infeasible to compute dk' from ek'.
+         This is because the tuple $(g_0, g_1', h_0, h_1)$ is a "random" non-DDH tuple $(g_0, g_0^\alpha, g_0^{x_0}, g_0^{x_0 + \alpha x1})$ 
+         where $h_1 = g_0^{x_0 + \alpha x_1}$ is completely independent from the prior three elements, and $\alpha$ is chosen randomly.
+          Hence, computing $dk'$ from $ek'$ is equivalent to solving the DDH problem, which is assumed to be computationally infeasible
+    
+        second property: Any user who knows the secret key $dk'$ can still decrypt, i.e., 
+        the decryption algorithm $Dec(dk, C)$ still works. This is because given $C = (C1, C2)$, 
+        the decryption algorithm calculates $m = 0$ if $C_1/g_0^{x_0 r}$ mod $p == 1$, and $m = 1$ if $C_1/g_1^{x_1 r}$ mod $p == 1$,
+        which remains unchanged in the lossy key generation process.
+
+    \item [3.]
+        The scheme described above is CPA-secure under the DDH assumption. 
+        
+        To show this, we need to prove that an adversary who does not know the secret key $dk$
+         cannot distinguish between encryptions of two different messages with non-negligible advantage.
+
+        Suppose there is an adversary who is given access to the encryption oracle $Enc(ek, m)$
+         and is trying to distinguish between encryptions of two different messages, say $m_0$ and $m_1$. 
+         Let $C_0 = Enc(ek, m_0)$ and $C_1 = Enc(ek, m_1)$ be the ciphertexts corresponding to $m_0$ and $m_1$, respectively. 
+         The adversary outputs its guess $b'$ for the message it thinks was encrypted.
+        
+         
+        To prove CPA-security, we need to show that the probability of the adversary guessing correctly,
+         i.e., $b' = b$, where $b$ is the actual message, is negligibly close to $1/2$. 
+         Let $r_0$ and $r_1$ be the randomness used in the encryptions of $m_0$ and $m_1$, respectively. 
+         The ciphertexts $C_0$ and $C_1$ are given by $(g_b^{r_b}, h_b^{r_b})$, where $b \in \brace{0, 1}$.
+        
+        Since $g_0$ and $g_1$ are both generators of the subgroup $QR_p$ and $h_0 = g_0^{x_0}$ and $h_1 = g_1^{x_1}$
+         are completely independent from $g_0$ and $g_1$, it follows that $(g_0, g_1, h_0, h_1)$ is a "random" non-DDH tuple.
+          Hence, under the DDH assumption, it is computationally infeasible for the adversary to determine $b$ from $C_0$ and $C_1$.
+        
+        Therefore, the probability of the adversary guessing correctly is 1/2, which is negligibly close to 1/2, and thus the scheme is CPA-secure.
+        
+\end{itemize}
