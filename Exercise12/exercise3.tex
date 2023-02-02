@@ -1,1 +1,27 @@
- 
+% The security of the scheme relies on the assumption that it is infeasible for an attacker to determine whether a given value is a quadratic residue. However, if an algorithm exists that can solve the quadratic residuosity problem in polynomial time, as stated in Fact 1, then the encryption scheme is not secure and an attacker can easily decrypt messages. Therefore, the Goldwasser-Micali encryption scheme is lossy under the assumption stated in Fact 1.
+
+% A scheme is considered lossy if an adversary can obtain some information about the plaintext even if they do not know the secret key. In the case of the Goldwasser-Micali encryption scheme, if an adversary can determine whether a given value is a quadratic residue, then they can obtain information about the plaintext.
+
+% This is because the scheme uses the quadratic residuosity problem to encrypt messages. If an adversary can determine whether a value is a quadratic residue, then they can effectively break the encryption and obtain information about the plaintext.
+
+% Therefore, the Goldwasser-Micali encryption scheme is lossy because the security of the scheme relies on the difficulty of the quadratic residuosity problem, and if this problem can be solved in polynomial time, as stated in Fact 1, then the scheme is no longer secure and the adversary can obtain information about the plaintext.
+
+The Goldwasser-Micali encryption scheme is a public key encryption scheme that uses the quadratic 
+residuosity problem to encrypt messages. In this scheme, the public key is the value $N = pq$, where $p$ and $q$ 
+are large prime numbers. The encryption process involves transforming the plaintext into a value $x$ and then computing $x^2 (mod N)$, 
+where $(mod N)$ denotes the operation of taking the remainder after division by N. 
+The ciphertext is then transmitted to the recipient, who can decrypt it by determining whether $x^2$ is a quadratic residue modulo N.
+
+The security of the scheme relies on the assumption that it is difficult for an adversary to determine whether $x^2$ 
+is a quadratic residue modulo N. However, if an algorithm exists that can solve the quadratic residuosity problem in polynomial time,
+as stated in Fact 1, then the security of the scheme is compromised. In this case, an adversary can easily determine whether $x^2$
+is a quadratic residue, and thus obtain information about the plaintext.
+
+For example, let's say the plaintext is the message "HELLO". The recipient first converts each letter into a numerical value 
+(e.g., using ASCII encoding). Then, they compute $x^2 (mod N)$ for each numerical value and send the resulting ciphertext to the adversary. 
+If the adversary can determine whether $x^2$ is a quadratic residue, they can effectively break the encryption and obtain information about 
+the plaintext message.
+
+In conclusion, the Goldwasser-Micali encryption scheme is lossy because its security relies on the difficulty of the quadratic residuosity 
+problem, and if an algorithm exists that can solve this problem in polynomial time, the scheme can be easily broken by an adversary and 
+information about  the plaintext can be obtained.
