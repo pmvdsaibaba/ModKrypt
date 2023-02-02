@@ -3,7 +3,6 @@ To simulate the PRF-game for our adversary \(\mathcal{A}\) against the PRF, we s
 If \(b= 0\), then we answer each query \(x\) of \(\mathcal{A}\) with the result of the random oracle \(H\), queried with \(k \abs{} x\).\\
 If \(b= 1\), then we answer each query \(x\) of \(\mathcal{A}\) with the result of \(f(k \abs{} x)\).\\
 \(\mathcal{A}\) then outputs \(b'\) and wins if \(b' = b\).\\
-Efficiency?\\
 To analyse the success we see, that \(\mathcal{A}\) has to distinguish two cases: A truely random generated bitstring and the output from the random oracle, which is random per definition. \\
 So \(\abs{Pr[\mathcal{A}^{F(k,\cdot)}(1^{\lambda})= 1]= Pr[\mathcal{A}^{f(\cdot)}(1^{\lambda})= 1]} \le negl(\lambda)\).\\
 It follows that \(F_k(x) := H (k \abs{} x)\) is a pseudorandom function.
